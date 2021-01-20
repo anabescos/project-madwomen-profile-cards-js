@@ -1,14 +1,13 @@
 <form action="create card" method="GET">
   <!--design section-->
   <fieldset>
-    <div>
+    <legend>
       <h2>
         <span>icono</span>
         <span>diseña</span>
         <span>flecha</span>
       </h2>
-    </div>
-
+    </legend>
     <label for="">
       <input type="radio" name="palette" checked />
       <ul class="palette1">
@@ -36,40 +35,67 @@
   </fieldset>
   <!-- fill section-->
   <fieldset>
-    <div>
+    <legend>
       <h2>
         <span>icono</span>
         <span>rellena</span>
         <span>flecha</span>
       </h2>
-    </div>
+    </legend>
     <label for="Name">Nombre Completo</label>
-    <input type="text" id="name" name="name" />
+    <input
+      placeholder="María García"
+      type="text"
+      id="name"
+      name="name"
+      required
+    />
     <label for="job">Trabajo</label>
-    <input type="text" id="job" name="job" />
+    <input
+      placeholder="Programadora front-end"
+      type="text"
+      id="job"
+      name="job"
+      required
+    />
     <div>
       <label for="photo"> Imagen de Perfil</label>
-      <input type="file" id="photo" name="photo" />
+      <input type="file" id="photo" name="photo" required />
       <button type="button">Añadir Imagen</button>
       <div>Previsualización</div>
     </div>
     <label for="email">Email</label>
-    <input type="email" id="email" name="email" />
+    <input
+      placeholder="maria.garcia@example.com"
+      type="email"
+      id="email"
+      name="email"
+      pattern=" ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+      required
+    />
     <label for="phone">Teléfono</label>
-    <input type="tel" id="phone" name="phone" />
-    <label for="linkedin">Nombre de usuario de Linkedin</label>
-    <input type="url" id="linkedin" name="linkedin" />
-    <label for="github">Nombre de usuario de Github</label>
-    <input type="url" id="github" name="github" />
+    <input
+      placeholder="+34 666666666"
+      type="tel"
+      id="phone"
+      name="phone"
+      pattern="^\+(?:[0-9]●?){6,14}[0-9]$
+     "
+      required
+    />
+    <label for="linkedin">Nombre de usuario de LinkedIn</label>
+    <input placeholder="mariagar" type="url" id="linkedin" name="linkedin" />
+    <label for="github">Nombre de usuario de GitHub</label>
+    <input placeholder="mariagar" type="url" id="github" name="github" />
   </fieldset>
   <!--Secction share-->
-  <div>
+  <legend>
     <h2>
       <span>icono</span>
       <span>comparte</span>
       <span>flecha</span>
     </h2>
-  </div>
+  </legend>
   <button type="submit" title="Create card"></button>
   <div>
     <h3>La tarjeta ha sido creada</h3>
