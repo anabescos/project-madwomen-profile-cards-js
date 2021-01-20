@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 95px 35px 30px;
+  background-color: $color-background;
+  &__logo {
+    width: 250px;
+    height: 63px;
+    object-fit: contain;
+    margin-bottom: 35px;
+  }
+  &__title {
+    @include t($font-landing, 1.2rem, $color-icon);
+    text-align: center;
+    font-weight: 900;
+  }
+  &__paragraph {
+    @include t($font-main, 0.8rem, $color-main);
+    text-align: center;
+    width: 264.8px;
+    margin-bottom: 17.8px;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: solid 1.6px rgba(225, 115, 52, 0.21);
+    width: 268px;
+    margin-bottom: 39px;
+    .item {
+      text-align: center;
+      &__square {
+        color: $color-icon;
+        font-size: 1.4rem;
+      }
+      &__word {
+        @include t($font-main, 0.8rem, $color-fontMain);
+      }
+    }
+  }
+  &__button {
+      background-color: $color-button;
+      width: 129px;
+      height: 42px;
+      border-radius: 21px;
+      padding: 10px 20px;
+      @include t($font-main, 1rem, $color-light);
+      text-align: center;
+  }
+}
+
+
