@@ -1,36 +1,40 @@
 <!--design section-->
 <fieldset class="design">
-  <legend>
-    <h2 class="design__title">
-      <span>icono</span>
-      <span>diseña</span>
-      <span>flecha</span>
-    </h2>
+  <legend class="design__title">
+    <div class="design__title--container">
+      <i class="far fa-object-ungroup design__title--icon"></i>
+      <h2 class="design__title--word">diseña</h2>
+    </div>
+    <i class="fas fa-chevron-up design__title--arrow"></i>
   </legend>
+
   <div class="design__palette">
-    <label for="">
-      <input class="design__palette--1" type="radio" name="palette" checked />
-      <ul>
-        <li>colorA</li>
-        <li>colorB</li>
-        <li>colorC</li>
-      </ul>
-    </label>
-    <label for="">
-      <input type="radio" name="palette" />
-      <ul class="palette2">
-        <li>colorA</li>
-        <li>colorB</li>
-        <li>colorC</li>
-      </ul>
-    </label>
-    <label for="">
-      <input type="radio" name="palette" />
-      <ul class="palette3">
-        <li>colorA</li>
-        <li>colorB</li>
-        <li>colorC</li>
-      </ul>
-    </label>
+    <h3 class="design__palette--colors">Colores</h3>
+    <div>
+      <label class="design__palette--input" for="">
+        <input type="radio" name="palette" checked />
+        <ul class="design__palette--list">
+          <li class="design__palette1--color1">colorA</li>
+          <li class="design__palette1--color2">colorB</li>
+          <li class="design__palette1--color3">colorC</li>
+        </ul>
+      </label>
+      <label class="design__palette--input" for="">
+        <input type="radio" name="palette" />
+        <ul class="design__palette--list">
+          <li class="design__palette2--color1">colorA</li>
+          <li class="design__palette2--color2">colorB</li>
+          <li class="design__palette2--color3">colorC</li>
+        </ul>
+      </label>
+      <label class="design__palette--input" for="">
+        <input type="radio" name="palette" />
+        <ul class="design__palette--list">
+          <li class="design__palette3--color1">colorA</li>
+          <li class="design__palette3--color2">colorB</li>
+          <li class="design__palette3--color3">colorC</li>
+        </ul>
+      </label>
+    </div>
   </div>
 </fieldset>
