@@ -1,0 +1,120 @@
+.design {
+  border: 0px;
+  padding-bottom: 30px;
+  background-color: $color-light;
+  font-family: $font-main;
+  color: $color-fontMain;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    &--container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &--word {
+      font-size: 18px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+
+    &--icon {
+      width: 21px;
+      height: 18px;
+      color: $color-icon;
+    }
+    &--arrow {
+      width: 16px;
+      height: 18px;
+      text-align: right;
+    }
+  }
+
+  &__palette {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--colors {
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: uppercase;
+      margin: 22px 0 0 19px;
+    }
+
+    &--input {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
+    }
+    &--list {
+      display: flex;
+      flex-direction: row;
+      margin-left: 4px;
+      color: transparent;
+    }
+  }
+  &__palette1 {
+    &--color1 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette1-color1;
+    }
+    &--color2 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette1-color2;
+    }
+    &--color3 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette1-color3;
+    }
+  }
+  &__palette2 {
+    &--color1 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette2-color1;
+    }
+    &--color2 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette2-color2;
+    }
+    &--color3 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette2-color3;
+    }
+  }
+  &__palette3 {
+    &--color1 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette3-color1;
+    }
+    &--color2 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette3-color2;
+    }
+    &--color3 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette3-color3;
+    }
+  }
+}
