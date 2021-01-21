@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d6db27f241.js" crossorigin="anonymous"></script> 
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.html">
+        <img
+          class="header__img"
+          src="./assets/images/logo-awesome-profile-cards.svg"
+          title="Go to home page"
+          alt="Awesome cards logo"
+        />
+      </a>
+    </header>
+
+    <main>
+      <section class="generator">
+        <div class="generator__button1"><i class="far fa-trash-alt"></i>Reset</div>
+        <div class="generator__container">
+          <h2 class="generator__container--name">Nombre apellido</h2>
+          <h3 class="generator__container--profession">Profesión</h3>
+          <img class="generator__container--img" src="./assets/images/lady.jpg" alt="" title="" />
+          <nav class="generator__container--nav">
+            <ul class="menu" >
+              <li class="menu__item"><i class="menu__item--icon fas fa-mobile-alt"></i></li>
+              <li class="menu__item"><i class="menu__item--icon far fa-envelope"></i></li>
+              <li class="menu__item"><i class="menu__item--icon fab fa-linkedin-in"></i></li>
+              <li class="menu__item"><i class="menu__item--icon fab fa-github-alt"></i></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <form class="form" action="create card" method="GET">
+        <!--design section-->
+        <fieldset class="design">
+          <legend>
+            <h2 class="design__title">
+              <span>icono</span>
+              <span>diseña</span>
+              <span>flecha</span>
+            </h2>
+          </legend>
+          <div class="design__palette">
+            <label for="">
+              <input class="design__palette--1" type="radio" name="palette" checked />
+              <ul>
+                <li>colorA</li>
+                <li>colorB</li>
+                <li>colorC</li>
+              </ul>
+            </label>
+            <label for="">
+              <input type="radio" name="palette" />
+              <ul class="palette2">
+                <li>colorA</li>
+                <li>colorB</li>
+                <li>colorC</li>
+              </ul>
+            </label>
+            <label for="">
+              <input type="radio" name="palette" />
+              <ul class="palette3">
+                <li>colorA</li>
+                <li>colorB</li>
+                <li>colorC</li>
+              </ul>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- fill section-->
+        <fieldset>
+          <legend>
+            <h2 class="tittle2">
+              <span>icono</span>
+              <span>rellena</span>
+              <span>flecha</span>
+            </h2>
+          </legend>
+          <label for="Name">Nombre Completo</label>
+          <input
+            placeholder="María García"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+          <label for="job">Trabajo</label>
+          <input
+            placeholder="Programadora front-end"
+            type="text"
+            id="job"
+            name="job"
+            required
+          />
+          <div>
+            <label for="photo"> Imagen de Perfil</label>
+            <input type="file" id="photo" name="photo" required />
+            <button type="button">Añadir Imagen</button>
+            <div>Previsualización</div>
+          </div>
+          <label for="email">Email</label>
+          <input
+            placeholder="maria.garcia@example.com"
+            type="email"
+            id="email"
+            name="email"
+            pattern=" ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            required
+          />
+          <label for="phone">Teléfono</label>
+          <input
+            placeholder="+34 666666666"
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="^\+(?:[0-9]●?){6,14}[0-9]$
+             "
+            required
+          />
+          <label for="linkedin">Nombre de usuario de LinkedIn</label>
+          <input placeholder="mariagar" type="url" id="linkedin" name="linkedin" />
+          <label for="github">Nombre de usuario de GitHub</label>
+          <input placeholder="mariagar" type="url" id="github" name="github" />
+        </fieldset>
+
+        <!--Secction share-->
+        <legend>
+          <h2>
+            <span>icono</span>
+            <span>comparte</span>
+            <span>flecha</span>
+          </h2>
+        </legend>
+        <button type="submit" title="Create card"></button>
+        <div>
+          <h3>La tarjeta ha sido creada</h3>
+          <a href="" target="_blank">link awesome profile card</a>
+          <a href="" target="_blank">link twitter</a>
+        </div>
+
+      </form>
+
+    </main>
+    <footer class="footer">
+      <small class="footer__small">
+        Awesome profile-cards @2018
+      </small>
+      <a  title="Ir a la página de Adalab" type="_blank" href="https://adalab.es/">
+        <img class="footer__logo" src="./assets/images/logo-adalab.png" alt="logo Adalab">
+      </a>
+    </footer>
+
+  </body>
+</html>
