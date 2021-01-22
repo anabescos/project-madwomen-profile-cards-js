@@ -4,4 +4,9 @@
   appearance: none;
 
   padding: 27px 20px 31px 20px;
+  background-image: linear-gradient(
+    to bottom,
+    $color-background,
+    $color-light 9%
+  );
 }

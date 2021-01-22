@@ -1,12 +1,13 @@
 .fill {
   border: 0px;
+  margin-top: 10px;
   padding-bottom: 30px;
-  background-color: $color-light;
   font-family: $font-main;
   color: $color-fontMain;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border-bottom: 1px solid $color-borderFooter;
 
   &__title {
     width: 100%;
@@ -39,7 +40,7 @@
     }
   }
   &__label {
-    font-size: 0, 87rem;
+    font-size: 0.875rem;
     color: $color-main;
     padding: 20px 0 7px 0;
   }
@@ -47,37 +48,42 @@
     width: 100%;
     height: 30px;
     border: solid 1px $palette1-color3;
+    font-size: 0.875rem;
+    padding: 3px 0 7px 9px;
   }
-}
-.name {
-  padding-top: 25px;
-}
-.job {
-  width: 100%;
-  height: 30px;
-  border: solid 1px $palette1-color3;
-  margin-bottom: 18px;
-}
 
-.buttonImg {
-  display: none;
-  height: 30px;
-  width: 140px;
-  padding-top: 7px;
-}
-.button2 {
-  height: 30px;
-  width: 140px;
-  border-radius: 3px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  padding-top: 7px;
-  background-color: $color-icon;
-  color: $color-light;
-  text-align: center;
-  line-height: 1.43;
-}
-.preview {
-  height: 30px;
-  width: 30px;
-  border: solid 1px $palette1-color3;
+  .name {
+    padding-top: 25px;
+  }
+
+  .imgLabel {
+    display: block;
+  }
+  .buttonInput {
+    display: none;
+    height: 30px;
+    width: 140px;
+    padding-top: 7px;
+  }
+  .addImage {
+    display: flex;
+  }
+  .buttonImg {
+    height: 30px;
+    width: 140px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    padding-top: 7px;
+    background-color: $color-icon;
+    color: $color-light;
+    text-align: center;
+    line-height: 1.43;
+    padding: 3px 0 7px 0;
+  }
+  .preview {
+    height: 30px;
+    width: 30px;
+    border: solid 1px $palette1-color3;
+    margin-left: 20px;
+  }
 }
