@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d6db27f241.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/d6db27f241.js" crossorigin="anonymous"></script> 
+    <title>Card Generator</title>
   </head>
   <body>
     <header class="header">
@@ -40,74 +48,87 @@
       <form class="form" action="create card" method="GET">
         <!--design section-->
         <fieldset class="design">
-          <legend>
-            <h2 class="design__title">
-              <span>icono</span>
-              <span>diseña</span>
-              <span>flecha</span>
-            </h2>
+          <legend class="design__title">
+            <div class="design__title--container">
+              <i class="far fa-object-ungroup icon"></i>
+              <h2 class="word">diseña</h2>
+            </div>
+            <i class="fas fa-chevron-up arrow"></i>
           </legend>
+
           <div class="design__palette">
-            <label for="">
-              <input class="design__palette--1" type="radio" name="palette" checked />
-              <ul>
-                <li>colorA</li>
-                <li>colorB</li>
-                <li>colorC</li>
-              </ul>
-            </label>
-            <label for="">
-              <input type="radio" name="palette" />
-              <ul class="palette2">
-                <li>colorA</li>
-                <li>colorB</li>
-                <li>colorC</li>
-              </ul>
-            </label>
-            <label for="">
-              <input type="radio" name="palette" />
-              <ul class="palette3">
-                <li>colorA</li>
-                <li>colorB</li>
-                <li>colorC</li>
-              </ul>
-            </label>
+            <h3 class="design__palette--colors">Colores</h3>
+            <div>
+              <label class="design__palette--input" for="">
+                <input class="design__palette1" type="radio" name="palette" checked />
+                <ul class="design__palette--list design__palette1">
+                  <li class="design__palette1--color1">colorA</li>
+                  <li class="design__palette1--color2">colorB</li>
+                  <li class="design__palette1--color3">colorC</li>
+                </ul>
+              </label>
+              <label class="design__palette--input" for="">
+                <input type="radio" name="palette" />
+                <ul class="design__palette--list">
+                  <li class="design__palette2--color1">colorA</li>
+                  <li class="design__palette2--color2">colorB</li>
+                  <li class="design__palette2--color3">colorC</li>
+                </ul>
+              </label>
+              <label class="design__palette--input" for="">
+                <input type="radio" name="palette" />
+                <ul class="design__palette--list">
+                  <li class="design__palette3--color1">colorA</li>
+                  <li class="design__palette3--color2">colorB</li>
+                  <li class="design__palette3--color3">colorC</li>
+                </ul>
+              </label>
+            </div>
           </div>
         </fieldset>
 
         <!-- fill section-->
-        <fieldset>
-          <legend>
-            <h2 class="tittle2">
-              <span>icono</span>
-              <span>rellena</span>
-              <span>flecha</span>
-            </h2>
+        <fieldset class="fill">
+          <legend class="fill__title">
+            <div class="fill__title--container">
+              <i class="far fa-keyboard icon"></i>
+              <h2 class="word">rellena</h2>
+            </div>
+            <i class="fas fa-chevron-up fill__title--arrow"></i>
           </legend>
-          <label for="Name">Nombre Completo</label>
+          <label class="fill__label name" for="Name">Nombre Completo</label>
           <input
+            class="fill__input"
             placeholder="María García"
             type="text"
             id="name"
             name="name"
             required
           />
-          <label for="job">Trabajo</label>
+          <label class="fill__label" for="job">Trabajo</label>
           <input
+            class="fill__input job"
             placeholder="Programadora front-end"
             type="text"
             id="job"
             name="job"
             required
           />
-          <div>
-            <label for="photo"> Imagen de Perfil</label>
-            <input type="file" id="photo" name="photo" required />
-            <button type="button">Añadir Imagen</button>
-            <div>Previsualización</div>
-          </div>
-          <label for="email">Email</label>
+          <label class="fill__label imgLabel" for="photo"> Imagen de perfil</label>
           <input
+            class="fill__input buttonInput"
+            type="file"
+            id="photo"
+            name="photo"
+            required
+          />
+          <div class="addImage">
+            <button class="fill__input buttonImg" type="button">Añadir imagen</button>
+            <div class="preview"></div>
+          </div>
+          <label class="fill__label" for="email">Email</label>
+          <input
+            class="fill__input"
             placeholder="maria.garcia@example.com"
             type="email"
             id="email"
@@ -115,8 +136,9 @@
             pattern=" ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             required
           />
-          <label for="phone">Teléfono</label>
+          <label class="fill__label" for="phone">Teléfono</label>
           <input
+            class="fill__input"
             placeholder="+34 666666666"
             type="tel"
             id="phone"
@@ -125,26 +147,46 @@
              "
             required
           />
-          <label for="linkedin">Nombre de usuario de LinkedIn</label>
-          <input placeholder="mariagar" type="url" id="linkedin" name="linkedin" />
-          <label for="github">Nombre de usuario de GitHub</label>
-          <input placeholder="mariagar" type="url" id="github" name="github" />
+          <label class="fill__label" for="linkedin"
+            >Nombre de usuario de LinkedIn</label
+          >
+          <input
+            class="fill__input"
+            placeholder="mariagar"
+            type="url"
+            id="linkedin"
+            name="linkedin"
+          />
+          <label class="fill__label" for="github">Nombre de usuario de GitHub</label>
+          <input
+            class="fill__input"
+            placeholder="mariagar"
+            type="url"
+            id="github"
+            name="github"
+          />
         </fieldset>
 
         <!--Secction share-->
-        <legend>
-          <h2>
-            <span>icono</span>
-            <span>comparte</span>
-            <span>flecha</span>
-          </h2>
-        </legend>
-        <button type="submit" title="Create card"></button>
-        <div>
-          <h3>La tarjeta ha sido creada</h3>
-          <a href="" target="_blank">link awesome profile card</a>
-          <a href="" target="_blank">link twitter</a>
-        </div>
+        <fieldset class="share">
+          <legend class="share__title">
+            <div class="share__title--container">
+              <i class="icon fas fa-share-alt"></i>
+              <h2 class="word">Comparte</h2>
+              </div>
+              <i class="share__title--arrow fas fa-chevron-up"></i>
+          </legend>
+          <button class="share__button" type="submit" title="Create card">
+            <i class="share__button--icon far fa-address-card"></i>
+            Crear tarjeta
+          </button>
+          <div class="border"></div>
+          <div class="share__subsection">
+            <h3 class="share__subsection--title">La tarjeta ha sido creada:</h3>
+            <a class="share__subsection--link" href="" target="_blank">link awesome profile card</a>
+            <a class="share__subsection--twitter"href="" target="_blank"><i class="icon fab fa-twitter"></i>Compartir en twitter</a>
+          </div>
+        </fieldset>
 
       </form>
 
