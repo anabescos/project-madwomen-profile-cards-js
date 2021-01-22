@@ -20,19 +20,18 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      .icon {
+        width: 21px;
+        height: 18px;
+        color: $color-icon;
+      }
+      .word {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-left: 8px;
+      }
     }
 
-    &--word {
-      font-size: 1, 12rem;
-      font-weight: 600;
-      margin-left: 8px;
-    }
-
-    &--icon {
-      width: 21px;
-      height: 18px;
-      color: $color-icon;
-    }
     &--arrow {
       width: 16px;
       height: 18px;
@@ -47,7 +46,7 @@
     justify-content: space-between;
 
     &--colors {
-      font-size: 0, 87rem;
+      font-size: 0.87rem;
       font-weight: normal;
       text-transform: uppercase;
       margin: 22px 0 0 19px;
