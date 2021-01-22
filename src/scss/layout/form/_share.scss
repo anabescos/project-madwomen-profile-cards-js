@@ -1,10 +1,11 @@
 .share {
   width: 100%;
-  padding: 13px 0px 30px;
+  padding-top: 13px;
   border: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: solid 1px $color-borderFooter;
   &__title {
     width: 100%;
     display: flex;
@@ -47,14 +48,17 @@
       padding-right: 9px;
     }
   }
+  .border {
+    border-bottom: solid 1px $color-borderFooter;
+    margin: 30px 0 20px;
+    // background-color: red;
+    width: 100%;
+  }
   &__subsection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
     padding: 20px 0 30px;
-    border-top: solid 1px $color-borderFooter;
-    border-bottom: solid 1px $color-borderFooter;
     &--title {
       @include t($font-main, 1.125rem, $color-fontMain);
       margin-bottom: 5px;

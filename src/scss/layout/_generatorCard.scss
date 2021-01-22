@@ -3,15 +3,17 @@
   height: 457px;
   padding: 38px 35px 40px 45px;
   background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-
   &__button1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 75px;
     height: 30px;
     border-radius: 15px;
     border: solid 1px white;
     text-transform: uppercase;
-    text-align: center;
-    padding: 4px 0 5px;
+    // text-align: center;
+    // padding: 4px 0 5px;
     margin-bottom: 20px;
     @include t($font-main, 0.75rem, $color-fontMain);
     .fa-trash-alt {
