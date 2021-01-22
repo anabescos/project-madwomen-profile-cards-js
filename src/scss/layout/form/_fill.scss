@@ -1,3 +1,84 @@
-.tittle2 {
-  background-color: red;
+.fill {
+  border: 0px;
+  padding-bottom: 30px;
+  background-color: $color-light;
+  font-family: $font-main;
+  color: $color-fontMain;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    &--container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &--word {
+      font-size: 1, 12rem;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+
+    &--icon {
+      width: 21px;
+      height: 18px;
+      color: $color-icon;
+    }
+    &--arrow {
+      width: 16px;
+      height: 18px;
+      text-align: right;
+    }
+  }
+  &__label {
+    font-size: 0, 87rem;
+    color: $color-main;
+    padding: 20px 0 7px 0;
+  }
+  &__input {
+    width: 100%;
+    height: 30px;
+    border: solid 1px $palette1-color3;
+  }
+}
+.name {
+  padding-top: 25px;
+}
+.job {
+  width: 100%;
+  height: 30px;
+  border: solid 1px $palette1-color3;
+  margin-bottom: 18px;
+}
+
+.buttonImg {
+  display: none;
+  height: 30px;
+  width: 140px;
+  padding-top: 7px;
+}
+.button2 {
+  height: 30px;
+  width: 140px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  padding-top: 7px;
+  background-color: $color-icon;
+  color: $color-light;
+  text-align: center;
+  line-height: 1.43;
+}
+.preview {
+  height: 30px;
+  width: 30px;
+  border: solid 1px $palette1-color3;
 }
