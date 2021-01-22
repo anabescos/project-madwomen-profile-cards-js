@@ -55,35 +55,33 @@
   .name {
     padding-top: 25px;
   }
-
-  .imgLabel {
-    display: block;
-  }
-  .buttonInput {
-    display: none;
-    height: 30px;
-    width: 140px;
-    padding-top: 7px;
-  }
   .addImage {
     display: flex;
-  }
-  .buttonImg {
-    height: 30px;
-    width: 140px;
-    border-radius: 3px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-    padding-top: 7px;
-    background-color: $color-icon;
-    color: $color-light;
-    text-align: center;
-    line-height: 1.43;
-    padding: 3px 0 7px 0;
-  }
-  .preview {
-    height: 30px;
-    width: 30px;
-    border: solid 1px $palette1-color3;
-    margin-left: 20px;
+    flex-direction: row;
+
+    .buttonInput {
+      width: 140px;
+      height: 30px;
+      position: absolute;
+      opacity: 0;
+    }
+    .buttonImg {
+      height: 30px;
+      width: 140px;
+      border-radius: 3px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+      padding-top: 7px;
+      background-color: $color-icon;
+      color: $color-light;
+      text-align: center;
+      line-height: 1.43;
+      padding: 3px 0 7px 0;
+    }
+    .preview {
+      height: 30px;
+      width: 30px;
+      border: solid 1px $palette1-color3;
+      margin-left: 20px;
+    }
   }
 }
