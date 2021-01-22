@@ -1,1 +1,62 @@
-
+.share {
+  width: 100%;
+  padding: 13px 0px 30px;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    &--item {
+      color: $color-icon;
+      font-size: 1.125rem;
+      padding: 13px 6px 33px 0;
+    }
+    &--word {
+      @include t($font-main, 1.125rem, $color-fontMain);
+      padding: 10px 80px 30px 6px;
+    }
+  }
+  &__button {
+    text-transform: uppercase;
+    width: 199px;
+    height: 50px;
+    @include t($font-main, 1.125rem, $color-light);
+    background-color: $colorInactive;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    border: none;
+    border-radius: 12px;
+    &--icon {
+      padding-right: 9px;
+    }
+  }
+  &__subsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px 0 30px;
+    border-top: solid 1px $color-borderFooter;
+    border-bottom: solid 1px $color-borderFooter;
+    &--title {
+      @include t($font-main, 1.125rem, $color-fontMain);
+      margin-bottom: 5px;
+    }
+    &--link {
+      @include t($font-main, 0.75rem, $color-icon);
+      margin-bottom: 13px;
+    }
+    &--twitter {
+      background-color: #00a0f5;
+      @include t($font-main, 0.875rem, $color-light);
+      width: 181px;
+      height: 30px;
+      border-radius: 3px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+      text-align: center;
+      padding-top: 3px;
+      .icon {
+        padding-right: 9.5px;
+      }
+    }
+  }
+}
