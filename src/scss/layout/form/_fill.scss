@@ -39,7 +39,46 @@
       text-align: right;
     }
   }
+  &__label {
+    font-size: 14px;
+    color: $color-main;
+    padding: 20px 0 7px 0;
+  }
+  &__input {
+    width: 100%;
+    height: 30px;
+    border: solid 1px $palette1-color3;
+  }
 }
-.buttonimg {
+.name {
+  padding-top: 25px;
+}
+.job {
+  width: 100%;
+  height: 30px;
+  border: solid 1px $palette1-color3;
+  margin-bottom: 18px;
+}
+
+.buttonImg {
   display: none;
+  height: 30px;
+  width: 140px;
+  padding-top: 7px;
+}
+.button2 {
+  height: 30px;
+  width: 140px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  padding-top: 7px;
+  background-color: $color-icon;
+  color: $color-light;
+  text-align: center;
+  line-height: 1.43;
+}
+.preview {
+  height: 30px;
+  width: 30px;
+  border: solid 1px $palette1-color3;
 }
