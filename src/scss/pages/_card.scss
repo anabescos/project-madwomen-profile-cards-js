@@ -1,0 +1,10 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-light;
+    @include tablet {
+        flex-direction: row-reverse;
+        background-image: linear-gradient(to bottom, $color-background, $color-light 9%);
+        padding: 24px 40px 20px 20px;
+    }
+}
