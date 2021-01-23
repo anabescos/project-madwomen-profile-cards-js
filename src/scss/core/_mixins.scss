@@ -1,5 +1,15 @@
 @mixin t($fontFamily, $fonSize, $fontColor) {
-    font-family: $fontFamily;
-    font-size: $fonSize;
-    color: $fontColor;
+  font-family: $fontFamily;
+  font-size: $fonSize;
+  color: $fontColor;
+}
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }
