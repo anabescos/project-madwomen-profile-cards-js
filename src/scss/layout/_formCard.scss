@@ -4,4 +4,7 @@
   appearance: none;
 
   padding: 27px 20px 31px 20px;
+  @include tablet {
+      width: 329px;
+  }
 }

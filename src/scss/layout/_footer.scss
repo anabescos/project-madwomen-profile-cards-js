@@ -6,7 +6,7 @@
   justify-content: flex-end;
   align-items: center;
   background-color: $color-light;
-  // border: solid 1px $color-borderFooter;
+  border-top: solid 1px $color-borderFooter;
   padding: 18px 0 20px;
   &__small {
     @include t($font-main, 0.87rem, rgba(107, 107, 107, 0.5));

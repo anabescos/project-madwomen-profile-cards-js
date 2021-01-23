@@ -1,8 +1,16 @@
 .generator {
   width: 100%;
-  height: 457px;
   padding: 38px 35px 40px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  @include tablet {
+    border-radius: 6px;
+    width: 399px;
+    flex-grow: 1;
+  }
   &__button1 {
     display: flex;
     justify-content: center;
@@ -12,15 +20,21 @@
     border-radius: 15px;
     border: solid 1px white;
     text-transform: uppercase;
+    
     // text-align: center;
     // padding: 4px 0 5px;
     margin-bottom: 20px;
     @include t($font-main, 0.75rem, $color-fontMain);
-    .fa-trash-alt {
-      margin-right: 8px;
+    &--reset {
+      // display: flex;
+      // align-items: flex-start;
+      .fa-trash-alt {
+        margin-right: 8px;
+      }
     }
   }
   &__container {
+    // margin: auto;
     width: 240px;
     height: 329px;
     background-color: white;
