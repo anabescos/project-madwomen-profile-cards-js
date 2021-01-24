@@ -27,22 +27,24 @@
       </a>
     </header>
 
-    <main>
+    <main class="wrapper">
       <section class="generator">
-        <div class="generator__button1"><i class="far fa-trash-alt"></i>Reset</div>
-        <div class="generator__container">
-          <h2 class="generator__container--name">Nombre apellido</h2>
-          <h3 class="generator__container--profession">Profesión</h3>
-          <img class="generator__container--img" src="./assets/images/lady.jpg" alt="" title="" />
-          <nav class="generator__container--nav">
-            <ul class="menu" >
-              <li class="menu__item"><i class="menu__item--icon fas fa-mobile-alt"></i></li>
-              <li class="menu__item"><i class="menu__item--icon far fa-envelope"></i></li>
-              <li class="menu__item"><i class="menu__item--icon fab fa-linkedin-in"></i></li>
-              <li class="menu__item"><i class="menu__item--icon fab fa-github-alt"></i></li>
-            </ul>
-          </nav>
-        </div>
+        <article class="generator__article">
+          <div class="generator__article--button1"><i class="far fa-trash-alt"></i>Reset</div>
+          <div class="generator__article--container">
+            <h2 class="container__name">Nombre apellido</h2>
+            <h3 class="container__profession">Profesión</h3>
+            <img class="container__img" src="./assets/images/lady.jpg" alt="" title="" />
+            <nav class="container__nav">
+              <ul class="menu" >
+                <li class="menu__item"><i class="menu__item--icon fas fa-mobile-alt"></i></li>
+                <li class="menu__item"><i class="menu__item--icon far fa-envelope"></i></li>
+                <li class="menu__item"><i class="menu__item--icon fab fa-linkedin-in"></i></li>
+                <li class="menu__item"><i class="menu__item--icon fab fa-github-alt"></i></li>
+              </ul>
+            </nav>
+          </div>
+        </article>
       </section>
 
       <form class="form" action="create card" method="GET">
@@ -51,10 +53,11 @@
           <legend class="design__title">
             <div class="design__title--container">
               <i class="far fa-object-ungroup icon"></i>
-              <h2 class="word">diseña</h2>
+              <h2 class="word">Diseña</h2>
             </div>
             <i class="fas fa-chevron-up arrow"></i>
           </legend>
+
 
           <div class="design__palette">
             <h3 class="design__palette--colors">Colores</h3>
@@ -92,10 +95,12 @@
           <legend class="fill__title">
             <div class="fill__title--container">
               <i class="far fa-keyboard icon"></i>
-              <h2 class="word">rellena</h2>
+              <h2 class="word">Rellena</h2>
             </div>
-            <i class="fas fa-chevron-up fill__title--arrow"></i>
+            <i class="fas fa-chevron-up arrow"></i>
           </legend>
+
+
           <label class="fill__label name" for="Name">Nombre Completo</label>
           <input
             class="fill__input"
@@ -115,15 +120,9 @@
             required
           />
           <label class="fill__label imgLabel" for="photo"> Imagen de perfil</label>
-          <input
-            class="fill__input buttonInput"
-            type="file"
-            id="photo"
-            name="photo"
-            required
-          />
           <div class="addImage">
             <button class="fill__input buttonImg" type="button">Añadir imagen</button>
+            <input class="buttonInput" type="file" id="photo" name="photo" required />
             <div class="preview"></div>
           </div>
           <label class="fill__label" for="email">Email</label>
@@ -173,9 +172,11 @@
             <div class="share__title--container">
               <i class="icon fas fa-share-alt"></i>
               <h2 class="word">Comparte</h2>
-              </div>
-              <i class="share__title--arrow fas fa-chevron-up"></i>
+            </div>
+            <i class="fas fa-chevron-up arrow"></i>
           </legend>
+
+
           <button class="share__button" type="submit" title="Create card">
             <i class="share__button--icon far fa-address-card"></i>
             Crear tarjeta
@@ -183,8 +184,12 @@
           <div class="border"></div>
           <div class="share__subsection">
             <h3 class="share__subsection--title">La tarjeta ha sido creada:</h3>
-            <a class="share__subsection--link" href="" target="_blank">link awesome profile card</a>
-            <a class="share__subsection--twitter"href="" target="_blank"><i class="icon fab fa-twitter"></i>Compartir en twitter</a>
+            <a class="share__subsection--link" href="" target="_blank"
+              >link awesome profile card</a
+            >
+            <a class="share__subsection--twitter" href="" target="_blank"
+              ><i class="icon fab fa-twitter"></i>Compartir en twitter</a
+            >
           </div>
         </fieldset>
 
