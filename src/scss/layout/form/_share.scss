@@ -1,12 +1,13 @@
 .share {
   width: 100%;
-  padding-top: 13px;
   border: 0;
+  color: $color-fontMain;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-bottom: solid 1px $color-borderFooter;
   &__title {
+    padding-top: 10px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -44,6 +45,10 @@
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
     border: none;
     border-radius: 12px;
+    margin-top: 30px;
+    @include tablet {
+      margin-top: 33px;
+    }
     &--icon {
       padding-right: 9px;
     }

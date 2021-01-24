@@ -1,12 +1,13 @@
 <!--Secction share-->
 <fieldset class="share">
-  <legend class="share__title">
-    <div class="share__title--container">
-      <i class="icon fas fa-share-alt"></i>
-      <h2 class="word">Comparte</h2>
-      </div>
-      <i class="share__title--arrow fas fa-chevron-up"></i>
-  </legend>
+  <include
+    src="./titles.html"
+    classTitle="share__title"
+    classTitleContainer="share__title--container"
+    classIcon="icon fas fa-share-alt"
+    section="Comparte"
+  ></include>
+
   <button class="share__button" type="submit" title="Create card">
     <i class="share__button--icon far fa-address-card"></i>
     Crear tarjeta
@@ -14,7 +15,11 @@
   <div class="border"></div>
   <div class="share__subsection">
     <h3 class="share__subsection--title">La tarjeta ha sido creada:</h3>
-    <a class="share__subsection--link" href="" target="_blank">link awesome profile card</a>
-    <a class="share__subsection--twitter"href="" target="_blank"><i class="icon fab fa-twitter"></i>Compartir en twitter</a>
+    <a class="share__subsection--link" href="" target="_blank"
+      >link awesome profile card</a
+    >
+    <a class="share__subsection--twitter" href="" target="_blank"
+      ><i class="icon fab fa-twitter"></i>Compartir en twitter</a
+    >
   </div>
 </fieldset>
