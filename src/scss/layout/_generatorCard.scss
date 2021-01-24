@@ -2,7 +2,6 @@
   width: 100%;
   padding: 38px 35px 40px 45px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
@@ -11,62 +10,59 @@
     width: 399px;
     flex-grow: 1;
   }
-  &__button1 {
+  &__article {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75px;
-    height: 30px;
-    border-radius: 15px;
-    border: solid 1px white;
-    text-transform: uppercase;
-    
-    // text-align: center;
-    // padding: 4px 0 5px;
-    margin-bottom: 20px;
-    @include t($font-main, 0.75rem, $color-fontMain);
-    &--reset {
-      // display: flex;
-      // align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    &--button1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 75px;
+      height: 30px;
+      border-radius: 15px;
+      border: solid 1px white;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @include t($font-main, 0.75rem, $color-fontMain);
       .fa-trash-alt {
         margin-right: 8px;
       }
     }
-  }
-  &__container {
-    // margin: auto;
-    width: 240px;
-    height: 329px;
-    background-color: white;
-    &--name {
-      @include t($font-card, 1.125rem, $color-main);
-      text-transform: capitalize;
-      padding: 21px 14px 4px 20px;
-    }
-    &--profession {
-      @include t($font-card, 1rem, $color-fontMain);
-      padding: 0 52px 10px 20px;
-    }
-    &--img {
+    &--container {
       width: 240px;
-      height: 200px;
-    }
-    &--nav {
-      padding: 10px 62px 12px 20px;
-      .menu {
-        display: flex;
-        justify-content: space-between;
-        &__item {
+      height: 329px;
+      background-color: white;
+      .container__name {
+        @include t($font-card, 1.125rem, $color-main);
+        text-transform: capitalize;
+        padding: 21px 14px 4px 20px;
+      }
+      .container__profession {
+        @include t($font-card, 1rem, $color-fontMain);
+        padding: 0 52px 10px 20px;
+      }
+      .container__img {
+        width: 240px;
+        height: 200px;
+      }
+      .container__nav {
+        padding: 10px 62px 12px 20px;
+        .menu {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 32px;
-          height: 32px;
-          border: solid 2px $color-border-form;
-          border-radius: 16px;
-          &--icon {
-            font-size: 1.125rem;
-            color: $color-main;
+          justify-content: space-between;
+          &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: solid 2px $color-border-form;
+            border-radius: 16px;
+            &--icon {
+              font-size: 1.125rem;
+              color: $color-main;
+            }
           }
         }
       }
