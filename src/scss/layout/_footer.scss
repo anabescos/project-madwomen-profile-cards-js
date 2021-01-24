@@ -8,9 +8,18 @@
   background-color: $color-light;
   border-top: solid 1px $color-borderFooter;
   padding: 18px 0 20px;
+  @include tablet {
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px 10px 41px;
+  }
   &__small {
     @include t($font-main, 0.87rem, rgba(107, 107, 107, 0.5));
     margin-bottom: 12px;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__logo {
     width: 103px;
