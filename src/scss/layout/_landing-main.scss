@@ -9,7 +9,7 @@
   background-color: $color-background;
   height: 85vh;
   @include tablet {
-    padding: 350px 174px 59px 175px;
+    padding: 34.21vh 174px 5.77vh 175px;
     justify-content: flex-start;
     height: 94vh;
   }
@@ -22,7 +22,7 @@
     @include tablet {
       width: 419px;
       height: 105px;
-      margin-bottom: 31px;
+      margin-bottom: 3.03vh;
     }
   }
   &__title {
@@ -41,7 +41,7 @@
     @include tablet {
       font-size: 1rem;
       width: 331px;
-      margin-bottom: 27px;
+      margin-bottom: 2.64vh;
     }
   }
   &__box {
@@ -55,7 +55,6 @@
     width: 268px;
     margin-bottom: 39px;
     @include tablet {
-      margin-bottom: 186px;
       width: 325px;
       grid-template-rows: 86px;
     }
@@ -85,5 +84,9 @@
     text-transform: uppercase;
     @include t($font-main, 1rem, $color-light);
     text-align: center;
+    @include tablet {
+      position: absolute;
+      bottom: 11.8vh;
+    }
   }
 }
