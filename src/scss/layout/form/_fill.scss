@@ -9,6 +9,10 @@
   align-items: flex-start;
   border-bottom: 1px solid $color-borderFooter;
 
+  ::placeholder {
+    color: $colorPlaceholder;
+  }
+
   &__title {
     width: 100%;
     display: flex;

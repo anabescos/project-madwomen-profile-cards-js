@@ -32,14 +32,19 @@
     &--container {
       width: 240px;
       background-color: white;
-      .container__name {
-        @include t($font-card, 1.125rem, $color-main);
-        text-transform: capitalize;
-        padding: 21px 14px 4px 20px;
-      }
-      .container__profession {
-        @include t($font-card, 1rem, $color-fontMain);
-        padding: 0 52px 10px 20px;
+
+      .container__nameprofession {
+        border-left: solid 5px $color-button;
+        margin: 21px 0 10px;
+        &--name {
+          @include t($font-card, 1.125rem, $color-main);
+          text-transform: capitalize;
+          padding: 0 14px 4px 20px;
+        }
+        &--profession {
+          @include t($font-card, 1rem, $color-fontMain);
+          padding: 0 52px 0 20px;
+        }
       }
       .container__img {
         width: 240px;
