@@ -30,17 +30,40 @@
     <main class="wrapper">
       <section class="generator">
         <article class="generator__article">
-          <div class="generator__article--button1"><i class="far fa-trash-alt"></i>Reset</div>
+          <div class="generator__article--button1">
+            <i class="far fa-trash-alt"></i>Reset
+          </div>
           <div class="generator__article--container">
-            <h2 class="container__name">Nombre apellido</h2>
-            <h3 class="container__profession">Profesión</h3>
-            <img class="container__img" src="./assets/images/lady.jpg" alt="" title="" />
+            <div class="container__nameprofession">
+              <h2 class="container__nameprofession--name js-generatorName">
+                Nombre apellido
+              </h2>
+              <h3 class="container__nameprofession--profession js-generatorJob">
+                Profesión
+              </h3>
+            </div>
+            <img
+              class="container__img"
+              src="./assets/images/lady.jpg"
+              alt=""
+              title=""
+            />
             <nav class="container__nav">
-              <ul class="menu" >
-                <li class="menu__item"><i class="menu__item--icon fas fa-mobile-alt"></i></li>
-                <li class="menu__item"><i class="menu__item--icon far fa-envelope"></i></li>
-                <li class="menu__item"><i class="menu__item--icon fab fa-linkedin-in"></i></li>
-                <li class="menu__item"><i class="menu__item--icon fab fa-github-alt"></i></li>
+              <ul class="menu">
+                <li class="menu__item">
+                  <i class="menu__item--icon fas fa-mobile-alt"></i>
+                </li>
+                <li class="menu__item">
+                  <a class="js-generatorEmail" href=""
+                    ><i class="menu__item--icon far fa-envelope"></i
+                  ></a>
+                </li>
+                <li class="menu__item">
+                  <i class="menu__item--icon fab fa-linkedin-in"></i>
+                </li>
+                <li class="menu__item">
+                  <i class="menu__item--icon fab fa-github-alt"></i>
+                </li>
               </ul>
             </nav>
           </div>
@@ -49,17 +72,17 @@
 
       <form class="form" action="create card" method="GET">
         <!--design section-->
-        <fieldset class="design">
-          <legend class="design__title">
+        <fieldset class="design js-container">
+          <legend class="design__title js-title">
             <div class="design__title--container">
               <i class="far fa-object-ungroup icon"></i>
               <h2 class="word">Diseña</h2>
             </div>
-            <i class="fas fa-chevron-up arrow"></i>
+            <i class="collapsable__icon fas fa-chevron-up arrow"></i>
           </legend>
 
 
-          <div class="design__palette">
+          <div class="design__palette collapsable__content">
             <h3 class="design__palette--colors">Colores</h3>
             <div>
               <label class="design__palette--input" for="">
@@ -97,23 +120,23 @@
               <i class="far fa-keyboard icon"></i>
               <h2 class="word">Rellena</h2>
             </div>
-            <i class="fas fa-chevron-up arrow"></i>
+            <i class="collapsable__icon fas fa-chevron-up arrow"></i>
           </legend>
 
 
           <label class="fill__label name" for="Name">Nombre Completo</label>
           <input
-            class="fill__input"
-            placeholder="María García"
+            class="fill__input js-fullName"
+            placeholder="Ej: Sally Jill"
             type="text"
             id="name"
             name="name"
             required
           />
-          <label class="fill__label" for="job">Trabajo</label>
+          <label class="fill__label" for="job">Puesto</label>
           <input
             class="fill__input job"
-            placeholder="Programadora front-end"
+            placeholder="Ej: Front-end unicorn"
             type="text"
             id="job"
             name="job"
@@ -127,8 +150,8 @@
           </div>
           <label class="fill__label" for="email">Email</label>
           <input
-            class="fill__input"
-            placeholder="maria.garcia@example.com"
+            class="fill__input js-email"
+            placeholder="Ej: sally-hill@gmail.com"
             type="email"
             id="email"
             name="email"
@@ -138,7 +161,7 @@
           <label class="fill__label" for="phone">Teléfono</label>
           <input
             class="fill__input"
-            placeholder="+34 666666666"
+            placeholder="Ej:+34 666666666"
             type="tel"
             id="phone"
             name="phone"
@@ -146,20 +169,18 @@
              "
             required
           />
-          <label class="fill__label" for="linkedin"
-            >Nombre de usuario de LinkedIn</label
-          >
+          <label class="fill__label" for="linkedin">Linkedin</label>
           <input
             class="fill__input"
-            placeholder="mariagar"
+            placeholder="Ej: linkedin.com/in/sally.hill"
             type="url"
             id="linkedin"
             name="linkedin"
           />
-          <label class="fill__label" for="github">Nombre de usuario de GitHub</label>
+          <label class="fill__label" for="github">Github</label>
           <input
             class="fill__input"
-            placeholder="mariagar"
+            placeholder="Ej: @sally-hill"
             type="url"
             id="github"
             name="github"
@@ -173,7 +194,7 @@
               <i class="icon fas fa-share-alt"></i>
               <h2 class="word">Comparte</h2>
             </div>
-            <i class="fas fa-chevron-up arrow"></i>
+            <i class="collapsable__icon fas fa-chevron-up arrow"></i>
           </legend>
 
 
@@ -205,5 +226,6 @@
       </a>
     </footer>
 
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
