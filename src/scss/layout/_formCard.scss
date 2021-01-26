@@ -5,6 +5,14 @@
 
   padding: 27px 20px 31px 20px;
   @include tablet {
-      width: 329px;
+    width: 329px;
+  }
+}
+.collapsable__close {
+  .collapsable__content {
+    display: none;
+  }
+  .collapsable__icon {
+    transform: rotate(180deg);
   }
 }

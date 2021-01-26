@@ -31,7 +31,6 @@
     }
     &--container {
       width: 240px;
-      height: 329px;
       background-color: white;
       .container__name {
         @include t($font-card, 1.125rem, $color-main);
