@@ -13,19 +13,19 @@
       padding-top: 10px;
       padding-bottom: 30px;
     }
-  }
-  &--container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    .icon {
-      @include legendIcon;
-    }
-    .word {
-      @include legendlegendWord;
-    }
-    &--arrow {
-      @include legendArrow;
+    &--container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .icon {
+        @include legendIcon;
+      }
+      .word {
+        @include legendWord;
+      }
+      &--arrow {
+        @include legendArrow;
+      }
     }
   }
   &__button {
