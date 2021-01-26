@@ -13,3 +13,29 @@
     @content;
   }
 }
+
+@mixin legendTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @content;
+}
+@mixin legendWord {
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: $color-fontMain;
+  margin-left: 8px;
+}
+@mixin legendIcon {
+  width: 21px;
+  height: 18px;
+  color: $color-icon;
+}
+@mixin legendArrow {
+  width: 16px;
+  height: 18px;
+  text-align: right;
+}

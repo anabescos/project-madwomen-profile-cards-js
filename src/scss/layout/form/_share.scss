@@ -1,41 +1,31 @@
 .share {
+  font-family: $font-main;
   width: 100%;
   border: 0;
-  color: $color-fontMain;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-bottom: solid 1px $color-borderFooter;
   &__title {
-    padding-top: 10px;
-    width: 100%;
+    @include legendTitle {
+      padding-top: 10px;
+      flex-wrap: nowrap;
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
+  }
+  &--container {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
-    text-transform: uppercase;
-    flex-wrap: nowrap;
-    padding-top: 10px; 
-    padding-bottom: 30px;
-    &--container {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      .icon {
-        width: 21px;
-        color: $color-icon;
-        font-size: 1.125rem;
-      }
-      .word {
-        @include t($font-main, 1.125rem, $color-fontMain);
-        font-weight: 600;
-        margin-left: 8px;
-      }
+    .icon {
+      @include legendIcon;
+    }
+    .word {
+      @include legendlegendWord;
     }
     &--arrow {
-      width: 16px;
-      height: 18px;
-      text-align: right;
+      @include legendArrow;
     }
   }
   &__button {
