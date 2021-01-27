@@ -25,7 +25,7 @@ const emailGenerator = document.querySelector('.js-generatorEmail');
 function handleEmail (event){
     const email = event.target.value;
     if (email === ""){
-        emailGenerator.innerHTML = "";
+        emailGenerator.innerHTML += "";
     }
     else {
     emailGenerator.href = `mailto:${email}`;
