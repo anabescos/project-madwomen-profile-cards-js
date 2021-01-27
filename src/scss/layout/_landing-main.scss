@@ -11,7 +11,8 @@
   @include tablet {
     padding: 34.21vh 174px 5.77vh 175px;
     justify-content: flex-start;
-    height: 94vh;
+    height: 94.5vh;
+    min-height: 800px;
   }
 
   &__logo {
@@ -57,6 +58,7 @@
     @include tablet {
       width: 325px;
       grid-template-rows: 86px;
+      margin-bottom: 0;
     }
     .item {
       text-align: center;
@@ -88,17 +90,16 @@
     animation-duration: 0.8s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-      @keyframes buttonChange {
-          from {
-            @include t($font-main, 1rem, $color-light);
-          }
-          to {
-            @include t($font-main, 1.02rem, $color-light);
-          }
+    @keyframes buttonChange {
+      from {
+        @include t($font-main, 1rem, $color-light);
       }
+      to {
+        @include t($font-main, 1.02rem, $color-light);
+      }
+    }
     @include tablet {
-      position: absolute;
-      bottom: 11.8vh;
+      margin-top: 17.48vh;
     }
   }
 }
