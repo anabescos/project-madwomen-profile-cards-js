@@ -84,6 +84,18 @@
     text-transform: uppercase;
     @include t($font-main, 1rem, $color-light);
     text-align: center;
+    animation-name: buttonChange;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+      @keyframes buttonChange {
+          from {
+            @include t($font-main, 1rem, $color-light);
+          }
+          to {
+            @include t($font-main, 1.02rem, $color-light);
+          }
+      }
     @include tablet {
       position: absolute;
       bottom: 11.8vh;
