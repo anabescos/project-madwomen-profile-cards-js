@@ -9,7 +9,7 @@
   border-top: solid 1px $color-borderFooter;
   padding: 18px 0 20px;
   @include tablet {
-    height: 6vh;
+    height: 60px;
     flex-direction: row;
     justify-content: space-between;
     padding: 0.98vh 40px 0.98vh 41px;
@@ -20,6 +20,9 @@
     @include tablet {
       margin: 0;
     }
+  }
+  &__link {
+    height: 40px;
   }
   &__logo {
     width: 103px;
