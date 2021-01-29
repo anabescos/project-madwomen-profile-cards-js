@@ -4,8 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../images/MadWomenTile_2.svg"),
+  background: url("../images/MadWomenTile_1v5.svg"),
     linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  background-size: 260px;
+  background-attachment: scroll;
   @include tablet {
     border-radius: 6px;
     width: 399px;
