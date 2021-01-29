@@ -22,10 +22,10 @@
       .word {
         @include legendWord;
       }
-      &--arrow {
-        @include legendArrow;
-      }
     }
+  }
+  .arrow {
+    @include legendArrow;
   }
   &__button {
     text-transform: uppercase;

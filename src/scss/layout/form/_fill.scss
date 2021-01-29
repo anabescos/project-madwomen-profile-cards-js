@@ -26,10 +26,9 @@
         @include legendWord;
       }
     }
-
-    &--arrow {
-      @include legendArrow;
-    }
+  }
+  .arrow {
+    @include legendArrow;
   }
   &__label {
     font-size: 0.875rem;
@@ -74,7 +73,7 @@
     .preview {
       height: 30px;
       width: 30px;
-      border: solid 1px $color-icon;
+      border: solid 1px $color-button;
       margin-left: 20px;
     }
   }
