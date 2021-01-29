@@ -1,18 +1,23 @@
 .container {
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 95px 35px 30px;
   background-color: $color-background;
-  height: 85vh;
+
   @include tablet {
-    padding: 34.21vh 174px 5.77vh 175px;
+    /*padding: 34.21vh 174px 5.77vh 175px;
     /*padding: 350px 174px 59px 175px;*/
+    padding: 20vh 174px 5.77vh 175px;
     justify-content: flex-start;
     /*height: 963px;*/
     height: 94.5vh;
-    min-height: 800px;
+    /*min-height: 800px;*/
+  }
+  @media screen and (min-width: 768px) and (max-height: 600px) {
+    padding: 5vh 174px 1vh 175px;
   }
   /*@media screen and (min-width: 1200px) {
     padding: 200px 174px 59px 175px;
@@ -29,6 +34,11 @@
       height: 105px;
       margin-bottom: 3.03vh;
       /*margin-bottom: 31px;*/
+    }
+    @media screen and (min-width: 768px) and (max-height: 600px) {
+      width: 40%;
+      height: auto;
+      margin-bottom: 0;
     }
   }
   &__title {
@@ -66,6 +76,7 @@
       grid-template-rows: 86px;
       margin-bottom: 0;
     }
+
     .item {
       text-align: center;
       &__square {
@@ -107,6 +118,9 @@
     @include tablet {
       margin-top: 17.48vh;
       /*margin-top: 186px;*/
+    }
+    @media screen and (min-width: 768px) and (max-height: 600px) {
+      margin-top: 2vh;
     }
     /*@media screen and (min-width: 1200px) {
       margin-top: 50px;
