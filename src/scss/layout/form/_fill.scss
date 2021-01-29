@@ -39,7 +39,7 @@
   &__input {
     width: 100%;
     height: 30px;
-    border: solid 1px $palette1-color3;
+    border: solid 1px $color-icon;
     font-size: 0.875rem;
     padding: 3px 0 7px 9px;
   }
@@ -74,7 +74,7 @@
     .preview {
       height: 30px;
       width: 30px;
-      border: solid 1px $palette1-color3;
+      border: solid 1px $color-icon;
       margin-left: 20px;
     }
   }
