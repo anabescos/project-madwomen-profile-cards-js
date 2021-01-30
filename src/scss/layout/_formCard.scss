@@ -6,6 +6,9 @@
   padding: 27px 20px 31px 20px;
   @include tablet {
     width: 329px;
+    float: left;
+    overflow-y: auto;
+    height: 100vh;
   }
 }
 .collapsable__close {
