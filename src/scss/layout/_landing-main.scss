@@ -7,8 +7,8 @@
   background-color: $color-background;
   height: 85vh;
   @include tablet {
-    padding: 34.21vh 174px 5.77vh 175px;
-    /*padding: 350px 174px 59px 175px;*/
+    // padding: 34.21vh 174px 5.77vh 175px;
+    padding: 200px 174px 59px 175px;
     justify-content: flex-start;
     /*height: 963px;*/
     height: 94.5vh;
@@ -20,13 +20,13 @@
   }*/
 
   &__logo {
-    width: 250px;
-    height: 63px;
+    width: 300px;
+    height: 100px;
     object-fit: contain;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     @include tablet {
-      width: 419px;
-      height: 105px;
+      width: 500px;
+      height: 400px;
       margin-bottom: 3.03vh;
       /*margin-bottom: 31px;*/
     }
