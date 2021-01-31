@@ -49,6 +49,18 @@
           padding: 0 52px 0 20px;
         }
       }
+
+      &.palette-1 .container__nameprofession {
+        border-left-color: $palette1-color2;
+      }
+
+      &.palette-2 .container__nameprofession {
+        border-left-color: $palette2-color2;
+      }
+
+      &.palette-3 .container__nameprofession {
+        border-left-color: $palette3-color2;
+      }
       .container__img {
         width: 240px;
         height: 200px;
