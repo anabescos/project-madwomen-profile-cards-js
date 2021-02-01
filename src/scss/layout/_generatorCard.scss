@@ -61,6 +61,27 @@
       &.palette-3 .container__nameprofession {
         border-left-color: $palette3-color2;
       }
+
+      &.palette-1 .container__nameprofession--name {
+        color: $palette1-color1;
+      }
+      &.palette-2 .container__nameprofession--name {
+        color: $palette2-color1;
+      }
+      &.palette-3 .container__nameprofession--name {
+        color: $palette3-color1;
+      }
+
+      // &.palette-1 .menu__item {
+      //   border: $palette1-color3;
+      // }
+      // &.palette-2 .menu__item {
+      //   border: $palette2-color3;
+      // }
+      // &.palette-3 .menu__item {
+      //   border: $palette3-color3;
+      // }
+
       .container__img {
         width: 240px;
         height: 200px;
@@ -83,6 +104,15 @@
               color: $color-main;
             }
           }
+        }
+        &.palette-1 .menu__item {
+          border: $palette1-color3;
+        }
+        &.palette-2 .menu__item {
+          border: $palette2-color3;
+        }
+        &.palette-3 .menu__item {
+          border: $palette3-color3;
         }
       }
     }
