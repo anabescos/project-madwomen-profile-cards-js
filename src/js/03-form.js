@@ -40,6 +40,7 @@ const inputsTextConfig = [
         cardClass: '.js-card-github',
         defaultValue: '',
         cardPrefix: 'https://www.github.com/',
+        cardPrefixGithub: '@',
         cardElementAttribute: 'href'
       }
   ];
@@ -84,7 +85,16 @@ const inputsTextConfig = [
         // compruebo si está vacío
         if (inputElement.value === '') {
           newValue = '#';
-        } else {
+        }
+        else if (inputsTextConfig[5] &&  ) {
+          newValue = newValue.replace(inputTextConfig.cardPrefixGithub, '');
+          newValue = inputTextConfig.cardPrefix + newValue;
+        
+        } else if (inputsTextConfig[5]) {
+          newValue = newValue.replace(inputTextConfig.cardPrefix, '');
+          newValue = inputTextConfig.cardPrefix + newValue;
+        }
+         else {
           // limpio el prefijo por si acaso la usuaria ha escrito cosas como:
           // - https://github.com/migueldelmazo en vez de migueldelmazo a secas
           // - https://www.linkedin.com/in/migueldelmazo en vez de migueldelmazo a secas
