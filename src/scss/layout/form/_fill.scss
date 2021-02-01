@@ -3,17 +3,21 @@
   border: 0px;
   margin-top: 10px;
   padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   border-bottom: 1px solid $color-borderFooter;
 
-  ::placeholder {
-    color: $colorPlaceholder;
-  }
-  &__box {
-    
-  }
+  // ::placeholder {
+  //   color: $colorPlaceholder;
+  // }
+  // &__box {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  //   ::placeholder {
+  //     color: $colorPlaceholder;
+  //   }
+  // }
+
+  
 
   &__title {
     @include legendTitle;
@@ -33,10 +37,18 @@
   .arrow {
     @include legendArrow;
   }
-  &__label {
-    font-size: 0.875rem;
-    color: $color-main;
-    padding: 20px 0 7px 0;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    ::placeholder {
+      color: $colorPlaceholder;
+    }
+    &--label {
+      font-size: 0.875rem;
+      color: $color-main;
+      padding: 20px 0 7px 0;
+    }
   }
   &__input {
     width: 100%;
