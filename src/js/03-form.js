@@ -39,7 +39,7 @@ const inputsTextConfig = [
         inputClass: '.js-input-github',
         cardClass: '.js-card-github',
         defaultValue: '',
-        cardPrefix: 'https://www.github.com/',
+        cardPrefix: 'https://github.com/',
         cardPrefixGithub: '@',
         cardElementAttribute: 'href'
       }
@@ -86,22 +86,24 @@ const inputsTextConfig = [
         if (inputElement.value === '') {
           newValue = '#';
         }
-        else if (inputsTextConfig[5] &&  ) {
+        else if (inputsTextConfig[5]) {
+        newValue = newValue.replace(inputTextConfig.cardPrefix, '');
           newValue = newValue.replace(inputTextConfig.cardPrefixGithub, '');
           newValue = inputTextConfig.cardPrefix + newValue;
         
-        } else if (inputsTextConfig[5]) {
-          newValue = newValue.replace(inputTextConfig.cardPrefix, '');
-          newValue = inputTextConfig.cardPrefix + newValue;
-        }
-         else {
+        } 
+        else {
+         newValue = newValue.replace(inputTextConfig.cardPrefix, '');
+        newValue = inputTextConfig.cardPrefix + newValue;
+         };
+         //else {
           // limpio el prefijo por si acaso la usuaria ha escrito cosas como:
           // - https://github.com/migueldelmazo en vez de migueldelmazo a secas
           // - https://www.linkedin.com/in/migueldelmazo en vez de migueldelmazo a secas
-          newValue = newValue.replace(inputTextConfig.cardPrefix, '');
+          //newValue = newValue.replace(inputTextConfig.cardPrefix, '');
           // vuelvo a añadir el prefijo https://www.linkedin.com/in/
-          newValue = inputTextConfig.cardPrefix + newValue;
-        }
+          //newValue = inputTextConfig.cardPrefix + newValue;
+        //}
         console.log('Valor del prefijo:', inputTextConfig.cardPrefix);
         console.log('Nuevo valor a poner en la tarjeta:', newValue);
         // actualizo la tarjeta
