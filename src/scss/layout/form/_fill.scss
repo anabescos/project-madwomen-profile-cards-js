@@ -17,8 +17,6 @@
   //   }
   // }
 
-  
-
   &__title {
     @include legendTitle;
 
@@ -90,6 +88,8 @@
       width: 30px;
       border: solid 1px $color-button;
       margin-left: 20px;
+      background-size: cover;
+      background-position: center;
     }
   }
 }

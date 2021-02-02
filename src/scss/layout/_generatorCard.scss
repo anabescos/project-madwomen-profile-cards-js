@@ -21,20 +21,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 75px;
-      height: 30px;
+      width: 76px;
+      height: 31px;
+      background-color: $color-icon;
+      color: $color-light;
       border-radius: 15px;
-      border: solid 1px white;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+      // border: solid 1px white;
       text-transform: uppercase;
       margin-bottom: 20px;
-      @include t($font-main, 0.75rem, $color-fontMain);
+      @include t($font-main, 0.75rem, $color-light);
       .fa-trash-alt {
         margin-right: 8px;
+        color: $color-light;
       }
     }
     &--container {
       width: 240px;
       background-color: white;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
 
       .container__nameprofession {
         border-left: solid 5px $color-button;
