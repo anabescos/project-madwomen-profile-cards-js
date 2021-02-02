@@ -50,38 +50,6 @@
         }
       }
 
-      &.palette-1 .container__nameprofession {
-        border-left-color: $palette1-color2;
-      }
-
-      &.palette-2 .container__nameprofession {
-        border-left-color: $palette2-color2;
-      }
-
-      &.palette-3 .container__nameprofession {
-        border-left-color: $palette3-color2;
-      }
-
-      &.palette-1 .container__nameprofession--name {
-        color: $palette1-color1;
-      }
-      &.palette-2 .container__nameprofession--name {
-        color: $palette2-color1;
-      }
-      &.palette-3 .container__nameprofession--name {
-        color: $palette3-color1;
-      }
-
-      // &.palette-1 .menu__item {
-      //   border: $palette1-color3;
-      // }
-      // &.palette-2 .menu__item {
-      //   border: $palette2-color3;
-      // }
-      // &.palette-3 .menu__item {
-      //   border: $palette3-color3;
-      // }
-
       .container__img {
         width: 240px;
         height: 200px;
@@ -114,6 +82,48 @@
         &.palette-3 .menu__item {
           border: $palette3-color3;
         }
+      }
+
+      &.palette-1 .container__nameprofession {
+        border-left-color: $palette1-color2;
+      }
+
+      &.palette-2 .container__nameprofession {
+        border-left-color: $palette2-color2;
+      }
+
+      &.palette-3 .container__nameprofession {
+        border-left-color: $palette3-color2;
+      }
+
+      &.palette-1 .container__nameprofession--name {
+        color: $palette1-color1;
+      }
+      &.palette-2 .container__nameprofession--name {
+        color: $palette2-color1;
+      }
+      &.palette-3 .container__nameprofession--name {
+        color: $palette3-color1;
+      }
+
+      &.palette-1 .container__nav .menu__item {
+        border-color: $palette1-color3;
+      }
+      &.palette-2 .container__nav .menu__item {
+        border-color: $palette2-color3;
+      }
+      &.palette-3 .container__nav .menu__item {
+        border-color: $palette3-color3;
+      }
+
+      &.palette-1 .container__nav .menu__item--icon {
+        color: $palette1-color1;
+      }
+      &.palette-2 .container__nav .menu__item--icon {
+        color: $palette2-color1;
+      }
+      &.palette-3 .container__nav .menu__item--icon {
+        color: $palette3-color1;
       }
     }
   }
