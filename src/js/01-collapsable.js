@@ -1,27 +1,21 @@
-
 'use strict';
 
-// const titleAreaElement = document.querySelector('.js-title');
-// const containerElement = document.querySelector('.js-container');
+const titlesAreaElement = document.querySelectorAll('.js-title');
 
-// function handleCollapsable (event){
-//     containerElement.classList.toggle('collapsable__close');
-// }
-
-
-// titleAreaElement.addEventListener ('click', handleCollapsable);
-
-
-const titleAreaElement = document.querySelectorAll('.js-title');
-const containerElement = document.querySelectorAll('.js-container');
-
-function handleCollapsable (){
-    for (let i = 0; i < containerElement.length; i++) {
-    containerElement[i].classList.toggle('collapsable__close');
-    }
+for (const titleAreaElement of titlesAreaElement) {
+    titleAreaElement.addEventListener('click', changeCollapsable);
 }
 
+function changeCollapsable(ev) {
+    const clickedTitleArea = ev.currentTarget;
+    const clickedCollapsable = clickedTitleArea.parentNode;
 
-titleAreaElement[0].addEventListener ('click', handleCollapsable);
-titleAreaElement[1].addEventListener ('click', handleCollapsable);
-titleAreaElement[2].addEventListener ('click', handleCollapsable);
+    const allCollapsables = document.querySelectorAll('.js-container');   
+    for (const collapsable of allCollapsables) {
+        if (clickedCollapsable === collapsable) {
+            collapsable.classList.toggle('collapsable__close');
+        } else {
+        collapsable.classList.add('collapsable__close');
+        }
+    }
+}

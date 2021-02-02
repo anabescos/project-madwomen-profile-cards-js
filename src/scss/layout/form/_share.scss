@@ -2,6 +2,8 @@
   font-family: $font-main;
   width: 100%;
   border: 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-borderFooter;
   &__title {
     @include legendTitle {
       padding-top: 10px;
@@ -37,7 +39,8 @@
       width: 199px;
       height: 50px;
       @include t($font-main, 1.125rem, $color-light);
-      background-color: $colorInactive;
+      // background-color: $colorInactive;
+      background-color: $color-icon;
       box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
       border: none;
       border-radius: 12px;
@@ -45,7 +48,7 @@
       @include tablet {
         margin-top: 33px;
       }
-      &--icon {
+      .iconCard {
         padding-right: 9px;
       }
     }
@@ -54,15 +57,15 @@
       flex-direction: column;
       align-items: center;
       padding: 20px 0 30px;
-      &--title {
+      .titleCard {
         @include t($font-main, 1.125rem, $color-fontMain);
         margin-bottom: 5px;
       }
-      &--link {
+      .linkCard {
         @include t($font-main, 0.75rem, $color-icon);
         margin-bottom: 13px;
       }
-      &--twitter {
+      .twitterLink {
         background-color: #00a0f5;
         @include t($font-main, 0.875rem, $color-light);
         width: 181px;
@@ -78,3 +81,4 @@
     }
   }
 }
+
