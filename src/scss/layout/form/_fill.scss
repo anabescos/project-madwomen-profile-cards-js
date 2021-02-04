@@ -64,10 +64,9 @@
     flex-direction: row;
 
     .buttonInput {
+      display: none;
       width: 140px;
       height: 30px;
-      position: absolute;
-      opacity: 0;
     }
     .buttonImg {
       height: 30px;

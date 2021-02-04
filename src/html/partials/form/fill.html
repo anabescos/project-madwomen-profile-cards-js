@@ -27,10 +27,23 @@
       name="job"
       required
     />
-    <label class="fill__box--label imgLabel" for="photo"> Imagen de perfil</label>
+    <label class="fill__box--label imgLabel" for="photo">
+      Imagen de perfil</label
+    >
     <div class="addImage">
-      <button class="js__profile-trigger fill__box--input buttonImg" type="button">Añadir imagen</button>
-      <input class="js__profile-upload-btn buttonInput" type="file" id="photo" name="photo" required />
+      <button
+        class="js__profile-trigger fill__box--input buttonImg"
+        type="button"
+      >
+        Añadir imagen
+      </button>
+      <input
+        class="js__profile-upload-btn buttonInput"
+        type="file"
+        id="photo"
+        name="photo"
+        required
+      />
       <div class="js__profile-preview preview"></div>
     </div>
     <label class="fill__box--label" for="email">Email</label>
@@ -40,7 +53,7 @@
       type="email"
       id="email"
       name="email"
-      pattern=" ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
       required
     />
     <label class="fill__box--label" for="phone">Teléfono</label>
@@ -51,14 +64,13 @@
       id="phone"
       name="phone"
       pattern="^[0-9]{9}$"
-      
       required
     />
     <label class="fill__box--label" for="linkedin">Linkedin</label>
     <input
       class="fill__box--input js-input-linkedin js-input-text"
       placeholder="Ej: linkedin.com/in/sally.hill"
-      type="url"
+      type="text"
       id="linkedin"
       name="linkedin"
     />
@@ -66,9 +78,9 @@
     <input
       class="fill__box--input js-input-github js-input-text"
       placeholder="Ej: @sally-hill"
-      type="url"
+      type="text"
       id="github"
       name="github"
     />
-</div>
+  </div>
 </fieldset>
