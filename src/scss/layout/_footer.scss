@@ -10,13 +10,13 @@
   padding: 18px 0 20px;
   @include tablet {
     height: 5.5vh;
-    /*max-height: 60px;*/
     min-height: 40px;
     flex-direction: row;
     justify-content: space-between;
     padding: 0.98vh 40px 0.98vh 41px;
   }
   &__small {
+    text-transform: capitalize;
     @include t($font-main, 0.87rem, rgba(107, 107, 107, 0.5));
     margin-bottom: 12px;
     @include tablet {

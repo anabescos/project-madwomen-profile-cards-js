@@ -2,9 +2,16 @@
   background-color: $color-background;
   width: 100%;
   height: 111px;
+  @include tablet {
+    height: 13.5vh;
+  }
+
   &__img {
     width: 201px;
     height: 50px;
     margin: 31px 0 30px 40px;
+    @include tablet {
+      margin: 31px 0 0 40px;
+    }
   }
 }
