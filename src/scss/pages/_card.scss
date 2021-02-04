@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: $color-light;
   @include tablet {
+    height: 81vh;
     flex-direction: row-reverse;
     background-image: linear-gradient(
       to bottom,
