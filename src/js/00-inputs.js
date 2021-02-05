@@ -130,34 +130,22 @@ for (const inputTextElement of inputTextElements) {
 // como updateAllInputs no recibe eventos puedo ejecutar esta función al inicio, tras un evento de usuaria o cuando me de la real gana!!!
 //updateAllInputs();
 
-// // const fullNameElement = document.querySelector('.js-fullName');
-// // const fullNameGenerator = document.querySelector ('.js-generatorName');
+//RESET
 
-// // function handleFullName (event) {
+const resetElement = document.querySelector(".js-reset");
 
-// //     const name = event.target.value;
+function handleResetForm() {
+  saveInLocalStorage();
 
-// //     if (name === ""){
+  for (const inputTextConfig of inputsTextConfig) {
+    const inputElement = document.querySelector(inputTextConfig.inputClass);
+    let newValue = inputElement.value;
+    if (inputElement.value !== " ") {
+      newValue = inputTextConfig.defaultValue;
+    } else {
+      newValue = inputElement.value;
+    }
+  }
+}
 
-// //         fullNameGenerator.innerHTML = "Nombre Apellido";
-// //     }
-// //     else {
-// //     fullNameGenerator.innerHTML = name;
-// //     }
-// // }
-
-// // fullNameElement.addEventListener ('keyup', handleFullName);
-
-// // const emailElement = document.querySelector ('.js-email');
-// // const emailGenerator = document.querySelector('.js-generatorEmail');
-
-// // function handleEmail (event){
-// //     const email = event.target.value;
-// //     if (email === ""){
-// //         emailGenerator.value = "";
-// //     }
-// //     else {
-// //     emailGenerator.href = `mailto:${email}`;
-// //     }
-// // }
-// // emailElement.addEventListener('keyup', handleEmail);
+resetElement.addEventListener("click", handleResetForm);
