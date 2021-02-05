@@ -1,4 +1,5 @@
 "use sctrict";
+
 const inputsTextConfig = [
   {
     inputClass: ".js-input-name",
@@ -47,7 +48,7 @@ const inputsTextConfig = [
 
 function updateAllInputs() {
   saveInLocalStorage();
-
+  const hiddenBoxElement = document.querySelector('.js-hidden');
   // recorro los 6 inputs del array inputsTextConfig
   for (const inputTextConfig of inputsTextConfig) {
     // por cada objeto del array inputsTextConfig hago:
@@ -82,6 +83,7 @@ function updateAllInputs() {
         newValue = inputTextConfig.defaultValue;
       } else {
         newValue = inputElement.value;
+        hiddenBoxElement.classList.remove("js-hidden");
       }
       console.log("Valor por defecto:", inputTextConfig.defaultValue);
       console.log("Nuevo valor a poner en la tarjeta:", newValue);
@@ -98,9 +100,11 @@ function updateAllInputs() {
         newValue = newValue.replace(inputTextConfig.cardPrefix, "");
         newValue = newValue.replace(inputTextConfig.cardPrefixGithub, "");
         newValue = inputTextConfig.cardPrefix + newValue;
+        hiddenBoxElement.classList.remove("js-hidden");
       } else {
         newValue = newValue.replace(inputTextConfig.cardPrefix, "");
         newValue = inputTextConfig.cardPrefix + newValue;
+        hiddenBoxElement.classList.remove("js-hidden");
       }
       //else {
       // limpio el prefijo por si acaso la usuaria ha escrito cosas como:
@@ -149,3 +153,4 @@ function handleResetForm() {
 }
 
 resetElement.addEventListener("click", handleResetForm);
+

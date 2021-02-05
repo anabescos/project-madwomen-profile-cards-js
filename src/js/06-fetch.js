@@ -35,6 +35,8 @@ function handleCreateBtn(ev) {
     .then((data) => {
       console.log("Server response:", data);
       if (data.success === true) {
+        createBtn.style.backgroundColor = "#d5d5d5";
+
         cardResultElement.innerHTML = "Haz click para ver tu tarjeta";
         cardResultElement.href = data.cardURL;
       } else {
