@@ -39,7 +39,7 @@ function writeImage() {
 }
 
 function updatePhoto() {
-  const currentPhoto = photo || '//beta.adalab.es/resources/images/adalab-logo-128x128.png';
+  const currentPhoto = photo || "https://www.larata.cl/wp-content/uploads/2019/03/Peggy-Olson-1-700x525.jpg";
   profilePreview.style.backgroundImage = `url(${currentPhoto})`;
   profileImage.style.backgroundImage = `url(${currentPhoto})`;
 }

@@ -3,6 +3,6 @@
 const resetButtonElement = document.querySelector('.js-reset');
 
 function resetInfo() {
-  localStorage.clear();
+  localStorage.clear('userData');
 }
 resetButtonElement.addEventListener('click', resetInfo);

@@ -48,7 +48,7 @@ const inputsTextConfig = [
 
 function updateAllInputs() {
   saveInLocalStorage();
-  const hiddenBoxElement = document.querySelector('.js-hidden');
+  const hiddenBoxElement = document.querySelector('.js-display');
   // recorro los 6 inputs del array inputsTextConfig
   for (const inputTextConfig of inputsTextConfig) {
     // por cada objeto del array inputsTextConfig hago:
