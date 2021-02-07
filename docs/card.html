@@ -20,9 +20,9 @@
       <a href="./index.html">
         <img
           class="header__img"
-          src="./assets/images/logo-awesome-profile-cards.svg"
+          src="./assets/images/MadWomenLogo_2.svg"
           title="Go to home page"
-          alt="Awesome cards logo"
+          alt="Mad Women"
         />
       </a>
     </header>
@@ -30,39 +30,40 @@
     <main class="wrapper">
       <section class="generator">
         <article class="generator__article">
-          <div class="generator__article--button1">
+          <div class="generator__article--button1 js-reset">
             <i class="far fa-trash-alt"></i>Reset
           </div>
-          <div class="generator__article--container">
+          <div class="generator__article--container js-card">
             <div class="container__nameprofession">
-              <h2 class="container__nameprofession--name js-generatorName">
+              <h2 class="container__nameprofession--name js-card-name">
                 Nombre apellido
               </h2>
-              <h3 class="container__nameprofession--profession js-generatorJob">
+              <h3 class="container__nameprofession--profession js-card-job">
                 Profesión
               </h3>
             </div>
-            <img
-              class="container__img"
-              src="./assets/images/lady.jpg"
-              alt=""
-              title=""
-            />
+            <div class="js__profile-image container__img"></div>
             <nav class="container__nav">
               <ul class="menu">
                 <li class="menu__item">
-                  <i class="menu__item--icon fas fa-mobile-alt"></i>
+                  <a class="js-card-phone" href="">
+                    <i class="menu__item--icon fas fa-mobile-alt"></i>
+                  </a>
                 </li>
                 <li class="menu__item">
-                  <a class="js-generatorEmail" href=""
+                  <a class="js-card-email" href=""
                     ><i class="menu__item--icon far fa-envelope"></i
                   ></a>
                 </li>
                 <li class="menu__item">
-                  <i class="menu__item--icon fab fa-linkedin-in"></i>
+                  <a class="js-card-linkedin" href="" target="_blank">
+                    <i class="menu__item--icon fab fa-linkedin-in"></i>
+                  </a>
                 </li>
                 <li class="menu__item">
-                  <i class="menu__item--icon fab fa-github-alt"></i>
+                  <a class="js-card-github" href="" target="_blank">
+                    <i class="menu__item--icon fab fa-github-alt"></i>
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -70,9 +71,9 @@
         </article>
       </section>
 
-      <form class="form" action="create card" method="GET">
+      <form class="form js-submit" action="create card" method="GET">
         <!--design section-->
-        <fieldset class="design js-container">
+        <fieldset class="design js-container collapsable__close">
           <legend class="design__title js-title">
             <div class="design__title--container">
               <i class="far fa-object-ungroup icon"></i>
@@ -86,7 +87,13 @@
             <h3 class="design__palette--colors">Colores</h3>
             <div>
               <label class="design__palette--input" for="">
-                <input class="design__palette1" type="radio" name="palette" checked />
+                <input
+                  class="design__palette1 js-palette"
+                  type="radio"
+                  name="palette"
+                  value="1"
+                  checked
+                />
                 <ul class="design__palette--list design__palette1">
                   <li class="design__palette1--color1">colorA</li>
                   <li class="design__palette1--color2">colorB</li>
@@ -94,7 +101,7 @@
                 </ul>
               </label>
               <label class="design__palette--input" for="">
-                <input type="radio" name="palette" />
+                <input class="js-palette" type="radio" name="palette" value="2" />
                 <ul class="design__palette--list">
                   <li class="design__palette2--color1">colorA</li>
                   <li class="design__palette2--color2">colorB</li>
@@ -102,7 +109,7 @@
                 </ul>
               </label>
               <label class="design__palette--input" for="">
-                <input type="radio" name="palette" />
+                <input class="js-palette" type="radio" name="palette" value="3" />
                 <ul class="design__palette--list">
                   <li class="design__palette3--color1">colorA</li>
                   <li class="design__palette3--color2">colorB</li>
@@ -114,8 +121,8 @@
         </fieldset>
 
         <!-- fill section-->
-        <fieldset class="fill">
-          <legend class="fill__title">
+        <fieldset class="fill js-container collapsable__close">
+          <legend class="fill__title js-title">
             <div class="fill__title--container">
               <i class="far fa-keyboard icon"></i>
               <h2 class="word">Rellena</h2>
@@ -124,72 +131,86 @@
           </legend>
 
 
-          <label class="fill__label name" for="Name">Nombre Completo</label>
-          <input
-            class="fill__input js-fullName"
-            placeholder="Ej: Sally Jill"
-            type="text"
-            id="name"
-            name="name"
-            required
-          />
-          <label class="fill__label" for="job">Puesto</label>
-          <input
-            class="fill__input job"
-            placeholder="Ej: Front-end unicorn"
-            type="text"
-            id="job"
-            name="job"
-            required
-          />
-          <label class="fill__label imgLabel" for="photo"> Imagen de perfil</label>
-          <div class="addImage">
-            <button class="fill__input buttonImg" type="button">Añadir imagen</button>
-            <input class="buttonInput" type="file" id="photo" name="photo" required />
-            <div class="preview"></div>
+          <div class="fill__box collapsable__content">
+            <label class="fill__box--label name" for="Name">Nombre Completo</label>
+            <input
+              class="fill__box--input js-input-name js-input-text"
+              placeholder="Ej: Sally Jill"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+            <label class="fill__box--label" for="job">Puesto</label>
+            <input
+              class="fill__box--input job js-input-job js-input-text"
+              placeholder="Ej: Front-end unicorn"
+              type="text"
+              id="job"
+              name="job"
+              required
+            />
+            <label class="fill__box--label imgLabel" for="photo">
+              Imagen de perfil</label
+            >
+            <div class="addImage">
+              <button
+                class="js__profile-trigger fill__box--input buttonImg"
+                type="button"
+              >
+                Añadir imagen
+              </button>
+              <input
+                class="js__profile-upload-btn buttonInput"
+                type="file"
+                id="photo"
+                name="photo"
+                required
+              />
+              <div class="js__profile-preview preview"></div>
+            </div>
+            <label class="fill__box--label" for="email">Email</label>
+            <input
+              class="fill__box--input js-input-email js-input-text"
+              placeholder="Ej: sally-hill@gmail.com"
+              type="email"
+              id="email"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+            />
+            <label class="fill__box--label" for="phone">Teléfono</label>
+            <input
+              class="fill__box--input js-input-phone js-input-text"
+              placeholder="Ej:+34 666666666"
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="^[0-9]{9}$"
+              required
+            />
+            <label class="fill__box--label" for="linkedin">Linkedin</label>
+            <input
+              class="fill__box--input js-input-linkedin js-input-text"
+              placeholder="Ej: linkedin.com/in/sally.hill"
+              type="text"
+              id="linkedin"
+              name="linkedin"
+            />
+            <label class="fill__box--label" for="github">Github</label>
+            <input
+              class="fill__box--input js-input-github js-input-text"
+              placeholder="Ej: @sally-hill"
+              type="text"
+              id="github"
+              name="github"
+            />
           </div>
-          <label class="fill__label" for="email">Email</label>
-          <input
-            class="fill__input js-email"
-            placeholder="Ej: sally-hill@gmail.com"
-            type="email"
-            id="email"
-            name="email"
-            pattern=" ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-            required
-          />
-          <label class="fill__label" for="phone">Teléfono</label>
-          <input
-            class="fill__input"
-            placeholder="Ej:+34 666666666"
-            type="tel"
-            id="phone"
-            name="phone"
-            pattern="^\+(?:[0-9]●?){6,14}[0-9]$
-             "
-            required
-          />
-          <label class="fill__label" for="linkedin">Linkedin</label>
-          <input
-            class="fill__input"
-            placeholder="Ej: linkedin.com/in/sally.hill"
-            type="url"
-            id="linkedin"
-            name="linkedin"
-          />
-          <label class="fill__label" for="github">Github</label>
-          <input
-            class="fill__input"
-            placeholder="Ej: @sally-hill"
-            type="url"
-            id="github"
-            name="github"
-          />
         </fieldset>
 
         <!--Secction share-->
-        <fieldset class="share">
-          <legend class="share__title">
+        <fieldset class="share js-container collapsable__close">
+          <legend class="share__title js-title">
             <div class="share__title--container">
               <i class="icon fas fa-share-alt"></i>
               <h2 class="word">Comparte</h2>
@@ -198,19 +219,26 @@
           </legend>
 
 
-          <button class="share__button" type="submit" title="Create card">
-            <i class="share__button--icon far fa-address-card"></i>
-            Crear tarjeta
-          </button>
-          <div class="border"></div>
-          <div class="share__subsection">
-            <h3 class="share__subsection--title">La tarjeta ha sido creada:</h3>
-            <a class="share__subsection--link" href="" target="_blank"
-              >link awesome profile card</a
+          <!-- <div class="border"></div> -->
+
+          <div class="share__box collapsable__content">
+            <button
+              class="share__box--button js-create-btn"
+              type="submit"
+              title="Create card"
             >
-            <a class="share__subsection--twitter" href="" target="_blank"
-              ><i class="icon fab fa-twitter"></i>Compartir en twitter</a
-            >
+              <i class="iconCard far fa-address-card"></i>
+              Crear tarjeta
+            </button>
+            <div class="share__box--subsection js-hidden js-display">
+              <h3 class="titleCard">La tarjeta ha sido creada:</h3>
+              <a class="linkCard js-card-result" href="" target="_blank"
+                >link awesome profile card</a
+              >
+              <a class="twitterLink" href="" target="_blank"
+                ><i class="icon fab fa-twitter"></i>Compartir en twitter</a
+              >
+            </div>
           </div>
         </fieldset>
 
@@ -218,7 +246,7 @@
 
     </main>
     <footer class="footer">
-      <small class="footer__small"> Awesome profile-cards @2018 </small>
+      <small class="footer__small"> Mad Women profile cards </small>
       <a
         class="footer__link"
         title="Ir a la página de Adalab"
