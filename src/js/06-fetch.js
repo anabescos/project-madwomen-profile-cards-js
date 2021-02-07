@@ -2,6 +2,7 @@
 
 const createBtn = document.querySelector(".js-create-btn");
 const cardResultElement = document.querySelector(".js-card-result");
+const hiddenBoxElement = document.querySelector('.js-display');
 
 function getUserData() {
   return {
@@ -26,6 +27,7 @@ function handleCreateBtn(ev) {
 
   fetch(url, {
     method: "POST",
+    mode: "no-cors",
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
@@ -36,7 +38,7 @@ function handleCreateBtn(ev) {
       console.log("Server response:", data);
       if (data.success === true) {
         createBtn.style.backgroundColor = "#d5d5d5";
-
+        hiddenBoxElement.classList.remove("js-hidden");
         cardResultElement.innerHTML = "Haz click para ver tu tarjeta";
         cardResultElement.href = data.cardURL;
       } else {
@@ -46,3 +48,5 @@ function handleCreateBtn(ev) {
 }
 
 createBtn.addEventListener("click", handleCreateBtn);
+
+
