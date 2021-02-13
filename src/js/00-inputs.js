@@ -7,7 +7,6 @@ const inputsTextConfig = [
     defaultValue: "Nombre apellidos",
     cardPrefix: "",
     cardElementAttribute: "innerHTML",
-    inputName: "el nombre",
   },
   {
     inputClass: ".js-input-job",

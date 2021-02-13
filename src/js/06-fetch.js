@@ -27,8 +27,9 @@ function getUserData() {
 }
 
 function handleCreateBtn(ev) {
+  ev.preventDefault();
+
   // debugger;
-  // ev.preventDefault();
   // console.log("NAME VALOR", inputName);
   // console.log("EMAIL VALOR", inputEmail);
   // if (inputName === " ") {
