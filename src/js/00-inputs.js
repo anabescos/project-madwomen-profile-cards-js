@@ -7,6 +7,7 @@ const inputsTextConfig = [
     defaultValue: "Nombre apellidos",
     cardPrefix: "",
     cardElementAttribute: "innerHTML",
+    inputName: "el nombre",
   },
   {
     inputClass: ".js-input-job",
@@ -48,7 +49,7 @@ const inputsTextConfig = [
 
 function updateAllInputs() {
   saveInLocalStorage();
- 
+
   // recorro los 6 inputs del array inputsTextConfig
   for (const inputTextConfig of inputsTextConfig) {
     // por cada objeto del array inputsTextConfig hago:
@@ -83,7 +84,6 @@ function updateAllInputs() {
         newValue = inputTextConfig.defaultValue;
       } else {
         newValue = inputElement.value;
-        
       }
       console.log("Valor por defecto:", inputTextConfig.defaultValue);
       console.log("Nuevo valor a poner en la tarjeta:", newValue);
@@ -100,11 +100,9 @@ function updateAllInputs() {
         newValue = newValue.replace(inputTextConfig.cardPrefix, "");
         newValue = newValue.replace(inputTextConfig.cardPrefixGithub, "");
         newValue = inputTextConfig.cardPrefix + newValue;
-        
       } else {
         newValue = newValue.replace(inputTextConfig.cardPrefix, "");
         newValue = inputTextConfig.cardPrefix + newValue;
-        
       }
       //else {
       // limpio el prefijo por si acaso la usuaria ha escrito cosas como:
@@ -133,23 +131,3 @@ for (const inputTextElement of inputTextElements) {
 // al arrancar la página proceso todos los inputs
 // como updateAllInputs no recibe eventos puedo ejecutar esta función al inicio, tras un evento de usuaria o cuando me de la real gana!!!
 //updateAllInputs();
-
-//RESET
-
-const resetElement = document.querySelector(".js-reset");
-
-function handleResetForm() {
-  saveInLocalStorage();
-
-  for (const inputTextConfig of inputsTextConfig) {
-    const inputElement = document.querySelector(inputTextConfig.inputClass);
-    let newValue = inputElement.value;
-    if (inputElement.value !== " ") {
-      newValue = inputTextConfig.defaultValue;
-    } else {
-      newValue = inputElement.value;
-    }
-  }
-}
-
-resetElement.addEventListener("click", handleResetForm);
