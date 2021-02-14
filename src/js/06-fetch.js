@@ -98,7 +98,7 @@ function handleTwitterBtn() {
   const tweetText = encodeURIComponent(
     "¡Echa un vistazo a la tarjeta que me he creado con Mad Women Profile Cards!"
   );
-  const tweetHashtag = encodeURIComponent("Adalab,promoL,MadWomen, frontend");
+  const tweetHashtag = encodeURIComponent("Adalab,promoL,MadWomen,frontend");
   const generatedCardURL = cardResultElement.href;
   twitterElement.href = `https://twitter.com/intent/tweet?text=${tweetText}&url=${generatedCardURL}&hashtags=${tweetHashtag}`;
 }
