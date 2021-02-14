@@ -10,8 +10,6 @@ We created this project using HTML for the content, SASS - for the styles and Ja
 
 Here you can visit the [fetch](https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/) we used for this project.
 
-We've chosen our own page design for Mad Women and our logo is ![alt text](./src/images/MadWomenLogo_1v2.svg)
-
 Using this [link](https://github.com/Adalab/project-promo-l-module-2-team-9.git) you can check out our code, explore it and play a little bit with it if you want.
 
 If you have any questions, please, don't hesitate and contact us using our own profile cards of Mad Women:
@@ -19,4 +17,4 @@ If you have any questions, please, don't hesitate and contact us using our own p
 - [Ana Bescós]()
 - [Mercedes Fe]()
 - [Ana Diz Bermejo]()
-- [Victoria Kovaleva]()
+- [Victoria Kovaleva](https://awesome-profile-cards.herokuapp.com/card/98741613335403758)
