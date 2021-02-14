@@ -116,12 +116,20 @@
                   <li class="design__palette3--color3">colorC</li>
                 </ul>
               </label>
+              <label class="design__palette--input" for="">
+                <input class="js-palette" type="radio" name="palette" value="4" />
+                <ul class="design__palette--list">
+                  <li class="design__palette4--color1">colorA</li>
+                  <li class="design__palette4--color2">colorB</li>
+                  <li class="design__palette4--color3">colorC</li>
+                </ul>
+              </label>
             </div>
           </div>
         </fieldset>
 
         <!-- fill section-->
-        <fieldset class="fill js-container collapsable__close">
+        <fieldset class="fill js-container collapsable__close collapsable__open">
           <legend class="fill__title js-title">
             <div class="fill__title--container">
               <i class="far fa-keyboard icon"></i>
@@ -221,7 +229,7 @@
 
           <!-- <div class="border"></div> -->
 
-          <div class="share__box collapsable__content">
+          <div class="share__box collapsable__content collapsable__open">
             <button
               class="share__box--button js-create-btn"
               type="submit"
@@ -230,6 +238,7 @@
               <i class="iconCard far fa-address-card"></i>
               Crear tarjeta
             </button>
+            <p class="js-required"></p>
             <div class="share__box--subsection js-hidden js-display">
               <h3 class="titleCard">La tarjeta ha sido creada:</h3>
               <a class="linkCard js-card-result" href="" target="_blank"
