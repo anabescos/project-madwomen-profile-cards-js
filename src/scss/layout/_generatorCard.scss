@@ -91,6 +91,9 @@
         &.palette-3 .menu__item {
           border: $palette3-color3;
         }
+        &.palette-4 .menu__item {
+          border: $palette4-color3;
+        }
       }
 
       &.palette-1 .container__nameprofession {
@@ -104,6 +107,9 @@
       &.palette-3 .container__nameprofession {
         border-left-color: $palette3-color2;
       }
+      &.palette-4 .container__nameprofession {
+        border-left-color: $palette4-color2;
+      }
 
       &.palette-1 .container__nameprofession--name {
         color: $palette1-color1;
@@ -113,6 +119,9 @@
       }
       &.palette-3 .container__nameprofession--name {
         color: $palette3-color1;
+      }
+      &.palette-4 .container__nameprofession--name {
+        color: $palette4-color1;
       }
 
       &.palette-1 .container__nav .menu__item {
@@ -124,6 +133,9 @@
       &.palette-3 .container__nav .menu__item {
         border-color: $palette3-color3;
       }
+      &.palette-4 .container__nav .menu__item {
+        border-color: $palette4-color3;
+      }
 
       &.palette-1 .container__nav .menu__item--icon {
         color: $palette1-color1;
@@ -133,6 +145,9 @@
       }
       &.palette-3 .container__nav .menu__item--icon {
         color: $palette3-color1;
+      }
+      &.palette-4 .container__nav .menu__item--icon {
+        color: $palette4-color1;
       }
     }
   }

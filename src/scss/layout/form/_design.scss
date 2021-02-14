@@ -105,4 +105,22 @@
       background-color: $palette3-color3;
     }
   }
+
+  &__palette4 {
+    &--color1 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette4-color1;
+    }
+    &--color2 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette4-color2;
+    }
+    &--color3 {
+      width: 30px;
+      height: 25px;
+      background-color: $palette4-color3;
+    }
+  }
 }

@@ -1,4 +1,6 @@
 "use sctrict";
+const createBtn = document.querySelector(".js-create-btn");
+const hiddenBoxElement = document.querySelector(".js-display");
 
 const inputsTextConfig = [
   {
@@ -48,6 +50,7 @@ const inputsTextConfig = [
 
 function updateAllInputs() {
   saveInLocalStorage();
+  resetShareSection();
 
   // recorro los 6 inputs del array inputsTextConfig
   for (const inputTextConfig of inputsTextConfig) {

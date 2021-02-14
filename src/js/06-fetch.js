@@ -1,17 +1,8 @@
 "use strict";
 
-const createBtn = document.querySelector(".js-create-btn");
 const cardResultElement = document.querySelector(".js-card-result");
-const hiddenBoxElement = document.querySelector(".js-display");
 const twitterElement = document.querySelector(".twitterLink");
-
-// const inputPhoto = photo;
-// const inputName = document.querySelector(".js-input-name").value;
-// const inputJob = document.querySelector(".js-input-job").value;
-// const inputEmail = document.querySelector(".js-input-email").value;
-// const inputPhone = document.querySelector(".js-input-phone").value;
-// const inputLinkedin = document.querySelector(".js-input-linkedin").value;
-// const inputGithub = document.querySelector(".js-input-github").value;
+const requiredElement = document.querySelector(".js-required");
 
 function getUserData() {
   return {
@@ -26,50 +17,82 @@ function getUserData() {
   };
 }
 
+function requiredText() {
+  const dataPhoto = photo;
+  const inputName = document.querySelector(".js-input-name").value;
+  const inputJob = document.querySelector(".js-input-job").value;
+  const inputEmail = document.querySelector(".js-input-email").value;
+  const inputPhone = document.querySelector(".js-input-phone").value;
+  const inputLinkedin = document.querySelector(".js-input-linkedin").value;
+  const inputGithub = document.querySelector(".js-input-github").value;
+
+  if (inputName === "") {
+    requiredElement.innerHTML = `<i class="fas fa-exclamation-circle"></i>
+    Por favor, rellena correctamente el nombre.`;
+
+    return false;
+  } else if (inputJob === "") {
+    requiredElement.innerHTML = `<i class="fas fa-exclamation-circle"></i>
+   Por favor, rellena correctamente el puesto.`;
+
+    return false;
+  } else if (inputPhone === "") {
+    requiredElement.innerHTML = `<i class="fas fa-exclamation-circle"></i>
+    Por favor, rellena correctamente el teléfono.`;
+
+    return false;
+  } else if (
+    dataPhoto ===
+      "https://decider.com/wp-content/uploads/2015/05/peggy-survivor-lead.png?w=1156&h=862&crop=1" ||
+    dataPhoto === ""
+  ) {
+    requiredElement.innerHTML = `<i class="fas fa-exclamation-circle"></i>
+    Por favor, añade una imagen.`;
+    return false;
+  } else if (inputEmail === "") {
+    requiredElement.innerHTML = `<i class="fas fa-exclamation-circle"></i>
+    Por favor, rellena correctamente el email.`;
+    return false;
+  } else if (inputLinkedin === "") {
+    requiredElement.innerHTML = `<i class="fas fa-exclamation-circle"></i>
+    Por favor, rellena correctamente el usuario de Linkedin.`;
+    return false;
+  } else if (inputGithub === "") {
+    requiredElement.innerHTML = `<i class="fas fa-exclamation-circle"></i>
+    Por favor, rellena correctamente el usuario de Github.`;
+    return false;
+  } else {
+    requiredElement.innerHTML = "";
+    return true;
+  }
+}
+
 function handleCreateBtn(ev) {
   ev.preventDefault();
 
-  // debugger;
-  // console.log("NAME VALOR", inputName);
-  // console.log("EMAIL VALOR", inputEmail);
-  // if (inputName === " ") {
-  //   console.log("NAME VALOR", inputName);
-  //   alert(`Por favor, rellena correctamente el nombre`);
-  //   console.log("ESTOY VACIO", inputName);
-  // } else if (inputJob === " ") {
-  //   alert(`Por favor, rellena correctamente el puesto`);
-  // } else if (inputEmail === " ") {
-  //   alert(`Por favor, rellena correctamente el email`);
-  // } else if (inputPhone === " ") {
-  //   alert(`Por favor, rellena correctamente el teléfono`);
-  // } else if (inputLinkedin === " ") {
-  //   alert(`Por favor, rellena correctamente el usuario de linkedin`);
-  // } else if (inputGithub === " ") {
-  //   alert(`Por favor, rellena correctamente el usuario de github`);
-  // } else {
-  const url = "https://awesome-profile-cards.herokuapp.com/card";
-  const data = getUserData();
-  fetch(url, {
-    method: "POST",
-    // mode: "no-cors",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Server response:", data);
-      if (data.success === true) {
-        createBtn.style.backgroundColor = "#d5d5d5";
-        hiddenBoxElement.classList.remove("js-hidden");
-        cardResultElement.innerHTML = "Haz click aquí para ver tu tarjeta";
-        cardResultElement.href = data.cardURL;
-      } else {
-        cardResultElement.innerHTML = data.error;
-      }
-    });
-  //}
+  if (requiredText() === true) {
+    const url = "https://awesome-profile-cards.herokuapp.com/card";
+    const data = getUserData();
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Server response:", data);
+        if (data.success === true) {
+          createBtn.style.backgroundColor = "#d5d5d5";
+          hiddenBoxElement.classList.remove("js-hidden");
+          cardResultElement.innerHTML = "Haz click aquí para ver tu tarjeta";
+          cardResultElement.href = data.cardURL;
+        } else {
+          requiredElement.innerHTML = `<i class="fas fa-exclamation-circle"></i>Lo sentimos, hemos tenido algún problema con el servidor. Prueba más tarde. Error: ${data.error}`;
+        }
+      });
+  }
 }
 
 function handleTwitterBtn() {
@@ -81,15 +104,10 @@ function handleTwitterBtn() {
   twitterElement.href = `https://twitter.com/intent/tweet?text=${tweetText}&url=${generatedCardURL}&hashtags=${tweetHashtag}`;
 }
 
+function resetShareSection() {
+  createBtn.style.backgroundColor = "#cc1517";
+  hiddenBoxElement.classList.add("js-hidden");
+}
+
 createBtn.addEventListener("click", handleCreateBtn);
 twitterElement.addEventListener("click", handleTwitterBtn);
-
-// for (const inputTextConfig of inputsTextConfig) {
-//   const inputElement = document.querySelector(inputTextConfig.inputClass);
-//   if (
-//     inputElement.value === inputTextConfig.defaultValue ||
-//     inputElement.value === " "
-//   ) {
-//     alert(`Por favor, rellana correctamente ${inputsTextConfig.inputName}`);
-//   }
-// }

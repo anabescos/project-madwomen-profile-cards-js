@@ -25,6 +25,7 @@
   .arrow {
     @include legendArrow;
   }
+
   .border {
     border-bottom: solid 1px $color-borderFooter;
     margin: 30px 0 20px;
@@ -81,6 +82,12 @@
       }
     }
   }
+}
+
+.js-required {
+  font-size: 0.875rem;
+  color: $color-main;
+  padding: 20px 0 0;
 }
 
 .js-hidden {
