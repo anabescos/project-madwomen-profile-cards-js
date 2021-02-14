@@ -10,10 +10,14 @@ function getCardData() {
     palette: parseInt(document.querySelector(".js-palette:checked").value),
     name: document.querySelector(".js-input-name").value,
     job: document.querySelector(".js-input-job").value,
-    email: document.querySelector(".js-card-email").href,
-    phone: document.querySelector(".js-card-phone").href,
-    linkedin: document.querySelector(".js-card-linkedin").href,
-    github: document.querySelector(".js-card-github").href,
+    email: document.querySelector(".js-input-email").value,
+    phone: document.querySelector(".js-input-phone").value,
+    linkedin: document
+      .querySelector(".js-card-linkedin")
+      .href.replace("https://www.linkedin.com/in/", ""),
+    github: document
+      .querySelector(".js-card-github")
+      .href.replace("https://github.com/", ""),
   };
 }
 
@@ -69,6 +73,7 @@ function requiredText() {
 
 function handleCreateBtn(ev) {
   ev.preventDefault();
+  console.log("DATOS API", getCardData());
   if (requiredText() === true) {
     const url = "https://awesome-profile-cards.herokuapp.com/card";
     const data = getCardData();

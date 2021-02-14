@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 const fr = new FileReader();
-const uploadBtn = document.querySelector('.js__profile-trigger');
-const fileField = document.querySelector('.js__profile-upload-btn');
-const profileImage = document.querySelector('.js__profile-image');
-const profilePreview = document.querySelector('.js__profile-preview');
-let photo = '';
+const uploadBtn = document.querySelector(".js__profile-trigger");
+const fileField = document.querySelector(".js__profile-upload-btn");
+const profileImage = document.querySelector(".js__profile-image");
+const profilePreview = document.querySelector(".js__profile-preview");
+let photo = "";
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -17,7 +17,7 @@ let photo = '';
  */
 function getImage(e) {
   const myFile = e.currentTarget.files[0];
-  fr.addEventListener('load', writeImage);
+  fr.addEventListener("load", writeImage);
   fr.readAsDataURL(myFile);
 }
 
@@ -39,7 +39,9 @@ function writeImage() {
 }
 
 function updatePhoto() {
-  const currentPhoto = photo || "https://www.larata.cl/wp-content/uploads/2019/03/Peggy-Olson-1-700x525.jpg";
+  const currentPhoto =
+    photo ||
+    "https://www.larata.cl/wp-content/uploads/2019/03/Peggy-Olson-1-700x525.jpg";
   profilePreview.style.backgroundImage = `url(${currentPhoto})`;
   profileImage.style.backgroundImage = `url(${currentPhoto})`;
 }
@@ -57,61 +59,5 @@ function fakeFileClick() {
  * - al botón visible para generar el click automático
  * - al campo oculto para cuando cambie su value
  */
-uploadBtn.addEventListener('click', fakeFileClick);
-fileField.addEventListener('change', getImage);
-
-
-
-// 'use strict';
-
-// const fr = new FileReader();
-// const uploadBtn = document.querySelector('.js__profile-trigger');
-// const fileField = document.querySelector('.js__profile-upload-btn');
-// const profileImage = document.querySelector('.js__profile-image');
-// const profilePreview = document.querySelector('.js__profile-preview');
-
-// /**
-//  * Recoge el archivo añadido al campo de tipo "file"
-//  * y lo carga en nuestro objeto FileReader para que
-//  * lo convierta a algo con lo que podamos trabajar.
-//  * Añade un listener al FR para que ejecute una función
-//  * al tener los datos listos
-//  * @param {evento} e
-//  */
-// function getImage(e) {
-//   const myFile = e.currentTarget.files[0];
-//   fr.addEventListener('load', writeImage);
-//   fr.readAsDataURL(myFile);
-// }
-
-// /**
-//  * Una vez tenemos los datos listos en el FR podemos
-//  * trabajar con ellos ;)
-//  */
-// function writeImage() {
-//   /* En la propiedad `result` de nuestro FR se almacena
-//    * el resultado. Ese resultado de procesar el fichero que hemos cargado
-//    * podemos pasarlo como background a la imagen de perfil y a la vista previa
-//    * de nuestro componente.
-//    */
-
-//   console.log(fr.result);
-//   profilePreview.style.backgroundImage = `url(${fr.result})`;
-//   profileImage.style.backgroundImage = `url(${fr.result})`;
-// }
-
-// /**
-//  * Genera un click automático en nuesto campo de tipo "file"
-//  * que está oculto
-//  */
-// function fakeFileClick() {
-//   fileField.click();
-// }
-
-// /**
-//  * Añadimos los listeners necesarios:
-//  * - al botón visible para generar el click automático
-//  * - al campo oculto para cuando cambie su value
-//  */
-// uploadBtn.addEventListener('click', fakeFileClick);
-// fileField.addEventListener('change', getImage);
+uploadBtn.addEventListener("click", fakeFileClick);
+fileField.addEventListener("change", getImage);

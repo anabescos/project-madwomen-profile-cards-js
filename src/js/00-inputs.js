@@ -106,14 +106,6 @@ function updateAllInputs() {
         newValue = newValue.replace(inputTextConfig.cardPrefix, "");
         newValue = inputTextConfig.cardPrefix + newValue;
       }
-      //else {
-      // limpio el prefijo por si acaso la usuaria ha escrito cosas como:
-      // - https://github.com/migueldelmazo en vez de migueldelmazo a secas
-      // - https://www.linkedin.com/in/migueldelmazo en vez de migueldelmazo a secas
-      //newValue = newValue.replace(inputTextConfig.cardPrefix, '');
-      // vuelvo a añadir el prefijo https://www.linkedin.com/in/
-      //newValue = inputTextConfig.cardPrefix + newValue;
-      //}
       console.log("Valor del prefijo:", inputTextConfig.cardPrefix);
       console.log("Nuevo valor a poner en la tarjeta:", newValue);
       // actualizo la tarjeta
@@ -130,7 +122,3 @@ const inputTextElements = document.querySelectorAll(".js-input-text");
 for (const inputTextElement of inputTextElements) {
   inputTextElement.addEventListener("keyup", updateAllInputs);
 }
-
-// al arrancar la página proceso todos los inputs
-// como updateAllInputs no recibe eventos puedo ejecutar esta función al inicio, tras un evento de usuaria o cuando me de la real gana!!!
-//updateAllInputs();
