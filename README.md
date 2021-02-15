@@ -17,4 +17,4 @@ If you have any questions, please, don't hesitate and contact us using our own p
 - [Ana Bescós](https://awesome-profile-cards.herokuapp.com/card/63091613376388034)
 - [Mercedes Fe](https://awesome-profile-cards.herokuapp.com/card/511613376411881)
 - [Ana Diz Bermejo]()
-- [Victoria Kovaleva](https://awesome-profile-cards.herokuapp.com/card/98741613335403758)
+- [Victoria Kovaleva](https://awesome-profile-cards.herokuapp.com/card/85891613378412337)
